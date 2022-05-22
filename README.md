@@ -8,6 +8,6 @@ Our project combines technology from path machine learning, android, and cloud c
 
 ## Branch
 - [Machine Learning]
-- [Android]
+- [Android](https://github.com/luthfialghz/Capstone-Project---DewPet-Bangkit-2022/tree/android)
 - [Cloud Webservice]
 - [Cloud Functions]
