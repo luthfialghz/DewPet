@@ -1,19 +1,22 @@
-from random import shuffle
 import tensorflow as tf
 import pandas as pd
 import numpy as np
-import csv
+from sklearn.preprocessing import LabelEncoder
 
 # baca file
-dataframe = pd.read_csv('D:\BANGKIT 2022\Capstone Project\Code\pet_dataset.csv')
+dataframe = pd.read_csv('pet_dataset.csv')
 
 # hapus "Animal Type" column
-traintest_data = dataframe.drop(["Animal Type"], axis=1)
+#traintest_data = dataframe.drop(["Animal Type"], axis=1)
 
-data_shuffled = traintest_data.sample(frac=1, random_state=1)
+traintest_data = dataframe.copy()
+
+label_encoder = LabelEncoder()
+traintest_data.loc[:,"Animal Type"] = label_encoder.fit_transform(traintest_data.iloc[:,-2])
+
 # split x and y 
-x_train = np.array(data_shuffled.iloc[:, :-1])
-y_train = np.array(data_shuffled.iloc[:, -1])
+x_train = traintest_data.drop(['Diagnosis'], axis=1)
+y_train = traintest_data['Diagnosis']
 
 #x_test = np.array(data_shuffled.iloc[-7:, :-1])
 #y_test = np.array(data_shuffled.iloc[-7:, -1])
@@ -23,9 +26,10 @@ y_train_encode = pd.get_dummies(y_train)
 
 # buat model
 model = tf.keras.models.Sequential([
-    tf.keras.layers.Dense(128, activation='relu', input_shape=(x_train.shape[1],)),
-    tf.keras.layers.Dense(64, activation='relu'),
-    tf.keras.layers.Dense(64, activation='relu'),
+    tf.keras.layers.Dense(64, activation='relu', input_dim=x_train.shape[1]),
+    tf.keras.layers.Dense(32, activation='relu'),
+    #tf.keras.layers.Dense(32, activation='relu'),
+    #tf.keras.layers.Dense(16, activation='relu'),
     tf.keras.layers.Dense(y_train_encode.shape[1], activation='softmax')
 ])
 
@@ -33,7 +37,7 @@ model = tf.keras.models.Sequential([
 model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
 
 # train model
-history = model.fit(x_train, y_train_encode, epochs=100, validation_split=0.1)
+history = model.fit(x_train, y_train_encode, epochs=100, validation_split=0.2, shuffle=True)
 
 #model.evaluate()
 
