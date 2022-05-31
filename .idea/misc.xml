@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/luthf/Desktop/Capstone-Project---DewPet-Bangkit-2022-android/app/src/main/res/drawable/rectangle_bg.xml" value="0.147" />
+        <entry key="..\:/Users/luthf/Desktop/Capstone-Project---DewPet-Bangkit-2022-android/app/src/main/res/drawable/rectangle_black.xml" value="0.147" />
+        <entry key="..\:/Users/luthf/Desktop/Capstone-Project---DewPet-Bangkit-2022-android/app/src/main/res/drawable/rectangle_white.xml" value="0.147" />
+        <entry key="..\:/Users/luthf/Desktop/Capstone-Project---DewPet-Bangkit-2022-android/app/src/main/res/drawable/secondary_bg.xml" value="0.147" />
+        <entry key="..\:/Users/luthf/Desktop/Capstone-Project---DewPet-Bangkit-2022-android/app/src/main/res/layout/activity_login.xml" value="0.4024390243902439" />
+        <entry key="..\:/Users/luthf/Desktop/Capstone-Project---DewPet-Bangkit-2022-android/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Users/luthf/Desktop/Capstone-Project---DewPet-Bangkit-2022-android/app/src/main/res/layout/activity_onboarding.xml" value="0.15" />
+        <entry key="..\:/Users/luthf/Desktop/Capstone-Project---DewPet-Bangkit-2022-android/app/src/main/res/layout/activity_register.xml" value="0.34646739130434784" />
+        <entry key="..\:/Users/luthf/Desktop/CapstoneProject-DewPet-main/app/src/main/res/drawable/button_primary.xml" value="0.1935" />
+        <entry key="..\:/Users/luthf/Desktop/CapstoneProject-DewPet-main/app/src/main/res/drawable/button_secondary.xml" value="0.3105" />
+        <entry key="..\:/Users/luthf/Desktop/CapstoneProject-DewPet-main/app/src/main/res/drawable/ic_logo___splash_screen.xml" value="0.3105" />
+        <entry key="..\:/Users/luthf/Desktop/CapstoneProject-DewPet-main/app/src/main/res/drawable/ic_logo___splash_screen___blue.xml" value="0.3105" />
+        <entry key="..\:/Users/luthf/Desktop/CapstoneProject-DewPet-main/app/src/main/res/layout/activity_login.xml" value="0.34646739130434784" />
+        <entry key="..\:/Users/luthf/Desktop/CapstoneProject-DewPet-main/app/src/main/res/layout/activity_main.xml" value="0.5" />
+        <entry key="..\:/Users/luthf/Desktop/CapstoneProject-DewPet-main/app/src/main/res/layout/activity_onboarding.xml" value="0.5" />
+        <entry key="..\:/Users/luthf/Desktop/CapstoneProject-DewPet-main/app/src/main/res/layout/activity_register.xml" value="0.33" />
+        <entry key="..\:/Users/luthf/Desktop/CapstoneProject-DewPet-main/app/src/main/res/layout/activity_splash_screen.xml" value="0.1" />
+        <entry key="..\:/Users/luthf/Desktop/CapstoneProject-DewPet/app/src/main/res/drawable/dew_consul.xml" value="0.3105" />
+        <entry key="..\:/Users/luthf/Desktop/CapstoneProject-DewPet/app/src/main/res/drawable/layout_bg.xml" value="0.3105" />
+        <entry key="..\:/Users/luthf/Desktop/CapstoneProject-DewPet/app/src/main/res/layout/activity_login.xml" value="0.34646739130434784" />
+        <entry key="..\:/Users/luthf/Desktop/CapstoneProject-DewPet/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Users/luthf/Desktop/CapstoneProject-DewPet/app/src/main/res/layout/activity_register.xml" value="0.33" />
+        <entry key="app/src/main/res/drawable/button.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/button_secondary.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/color_gradient.xml" value="0.143" />
+        <entry key="app/src/main/res/drawable/ellipse.xml" value="0.143" />
+        <entry key="app/src/main/res/drawable/ellipse_close.xml" value="0.143" />
+        <entry key="app/src/main/res/drawable/ellipse_open.xml" value="0.143" />
+        <entry key="app/src/main/res/drawable/gradient_color.xml" value="0.143" />
+        <entry key="app/src/main/res/drawable/ic_circle_24.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_circle_full_24.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_codicon_account.xml" value="0.143" />
+        <entry key="app/src/main/res/drawable/ic_logo___splash_screen.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/rectangle_bg.xml" value="0.143" />
+        <entry key="app/src/main/res/drawable/secondary_bg.xml" value="0.143" />
+        <entry key="app/src/main/res/font/font.xml" value="0.10092592592592593" />
+        <entry key="app/src/main/res/layout/activity_dew_consul.xml" value="0.13804457953394123" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.14488348530901723" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_onboarding.xml" value="0.10520111083984376" />
+        <entry key="app/src/main/res/layout/activity_register.xml" value="0.18620605468749996" />
+        <entry key="app/src/main/res/layout/activity_splash_screen.xml" value="0.125" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.29791666666666666" />
+      </ProjectState>
+    </option>
+  </component>
+</project>

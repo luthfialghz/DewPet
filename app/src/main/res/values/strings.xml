@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">DewPet</string>
+
+    <!--On Boarding Page-->
+    <string name="title_menu_1">Temukan Kebutuhan Peliharanmu</string>
+    <string name="title_menu_2">Temukan Kebutuhan Peliharanmu</string>
+    <string name="title_menu_3">Temukan Kebutuhan Peliharanmu</string>
+
+    <string name="desc_menu_1">Kami menyediakan beragam kebutuhan hewan peliharaan Anda. Dari makanan hingga perlengkapan pendukung.</string>
+    <string name="desc_menu_2">Kami menyediakan beragam kebutuhan hewan peliharaan Anda. Dari makanan hingga perlengkapan pendukung.</string>
+    <string name="desc_menu_3">Kami menyediakan beragam kebutuhan hewan peliharaan Anda. Dari makanan hingga perlengkapan pendukung.</string>
+
+    <string name="register_now">Daftar Sekarang</string>
+    <string name="register">Daftar</string>
+    <string name="not_have_account">Belum memiliki akun?</string>
+    <string name="login">Masuk</string>
+
+    <!--Register Page-->
+    <string name="input_name">Nama Lengkap</string>
+    <string name="input_email">Alamat Email</string>
+    <string name="input_password">Password</string>
+
+    <string name="create_account">Buat Akun</string>
+
+    <!--Login Page-->
+    <string name="have_account">Sudah memiliki akun?</string>
+
+    <!--Home Page-->
+    <string name="hello">"Hello, "</string>
+    <string name="tips_for_you">Tips untukmu!</string>
+
+</resources>
