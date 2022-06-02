@@ -4,10 +4,6 @@
 
 We are from team C22-PS253, and this is our project repository.
 
-Our project combines technology from path machine learning, android, and cloud computing to makes an application that makes it easy for pet owners in terms of care and understanding
+Web Services
 
-## Branch
-- [Machine Learning](https://github.com/luthfialghz/Capstone-Project---DewPet-Bangkit-2022/tree/machine_learning)
-- [Android](https://github.com/luthfialghz/Capstone-Project---DewPet-Bangkit-2022/tree/android)
-- [Cloud Webservice]
-- [Cloud Functions]
+![login](https://user-images.githubusercontent.com/79961627/171539651-72acbe42-aea2-4423-b0b5-b84c3be3ddd9.jpg)
