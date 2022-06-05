@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">DewPet</string>
+    <string name="google_maps_key">AIzaSyBoe1nFXXAHW-ED950tM-pG0f-CFlLncfw</string>
 
     <!--On Boarding Page-->
     <string name="title_menu_1">Temukan Kebutuhan Peliharanmu</string>
@@ -24,9 +25,22 @@
 
     <!--Login Page-->
     <string name="have_account">Sudah memiliki akun?</string>
+    <string name="save_me">Biarkan aku tetap masuk</string>
 
     <!--Home Page-->
     <string name="hello">"Hello, "</string>
     <string name="tips_for_you">Tips untukmu!</string>
+
+    <!--Settings Page-->
+    <string name="logout">Keluar</string>
+    <string name="title_activity_dew_care">DewCareActivity</string>
+
+    <!--Toolbar-->
+    <string name="toolbar">PetCare terdekat</string>
+    
+    <string-array name="nearby">
+        <item>PetCare</item>
+        <item>PetShop</item>
+    </string-array>
 
 </resources>

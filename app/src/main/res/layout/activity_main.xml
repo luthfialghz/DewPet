@@ -18,11 +18,11 @@
             android:layout_marginTop="32dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_codicon_account" />
+            app:srcCompat="@drawable/true_logo_blue" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/cl_data_user"
-            android:layout_width="175dp"
+            android:layout_width="wrap_content"
             android:layout_height="34dp"
             android:layout_marginStart="16dp"
             android:background="@drawable/layout_bg"
@@ -49,11 +49,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="6dp"
+                android:layout_marginEnd="8dp"
                 android:layout_marginBottom="6dp"
                 android:text="@string/input_name"
                 android:textColor="@color/white"
                 android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/tv_hello"
                 app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -148,7 +150,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/cl_features" />
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <androidx.constraintlayout.motion.widget.MotionLayout
             android:id="@+id/cl_article"
             android:layout_width="340dp"
             android:layout_height="312dp"
@@ -239,7 +241,7 @@
                 app:layout_constraintBottom_toBottomOf="@+id/main_article"
                 app:layout_constraintStart_toStartOf="parent"
                 app:srcCompat="@drawable/ellipse_close" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.motion.widget.MotionLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

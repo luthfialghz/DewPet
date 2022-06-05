@@ -10,5 +10,9 @@ data class LoginResponse(
 
     @SerializedName("namaL")
     @Expose
-    val namaL: String? = null
+    val namaL: String? = null,
+
+    @SerializedName("token")
+    @Expose
+    val token: String? = null
 )
