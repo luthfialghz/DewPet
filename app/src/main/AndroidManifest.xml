@@ -32,7 +32,7 @@
         -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyBoe1nFXXAHW-ED950tM-pG0f-CFlLncfw" />
+            android:value= "@string/google_maps_key" />
 
         <activity
             android:name=".features.DewCareActivity"
