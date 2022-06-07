@@ -10,6 +10,15 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <ProgressBar
+            android:id="@+id/pBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="125dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/rv_articles" />
+
         <ImageView
             android:id="@+id/iv_profile_user"
             android:layout_width="48dp"
@@ -18,7 +27,7 @@
             android:layout_marginTop="32dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/true_logo_blue" />
+            app:srcCompat="@drawable/ic_icon_person" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/cl_data_user"
@@ -49,7 +58,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="6dp"
-                android:layout_marginEnd="8dp"
+                android:layout_marginEnd="16dp"
                 android:layout_marginBottom="6dp"
                 android:text="@string/input_name"
                 android:textColor="@color/white"
@@ -58,18 +67,18 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/tv_hello"
                 app:layout_constraintTop_toTopOf="parent" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/cl_features"
             android:layout_width="340dp"
             android:layout_height="239dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="394dp"
+            android:layout_marginTop="24dp"
             android:background="@drawable/rectangle_bg"
             android:elevation="4dp"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.45"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/iv_profile_user">
 
@@ -139,109 +148,27 @@
             android:id="@+id/tv_tips_for_you"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="16dp"
+            android:layout_marginTop="24dp"
             android:fontFamily="@font/poppins_bold"
             android:text="@string/tips_for_you"
             android:textColor="@color/tiffanyBlue_100"
             android:textSize="16sp"
-            app:layout_constraintBottom_toTopOf="@+id/cl_article"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/cl_features" />
 
-        <androidx.constraintlayout.motion.widget.MotionLayout
-            android:id="@+id/cl_article"
-            android:layout_width="340dp"
-            android:layout_height="312dp"
-            android:layout_marginTop="488dp"
-            android:layout_marginBottom="32dp"
-            android:background="@drawable/rectangle_bg"
-            app:layoutDescription="@xml/activity_main_xml_cl_article_scene"
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_articles"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
-            <ImageView
-                android:id="@+id/main_article"
-                android:layout_width="330dp"
-                android:layout_height="150dp"
-                android:layout_marginTop="5dp"
-                android:background="@drawable/main_article_1"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ImageView
-                android:id="@+id/main_article_2"
-                android:layout_width="330dp"
-                android:layout_height="150dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="5dp"
-                android:background="@drawable/main_article_2"
-                app:layout_constraintStart_toEndOf="@+id/main_article"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ImageView
-                android:id="@+id/main_article_3"
-                android:layout_width="330dp"
-                android:layout_height="150dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="5dp"
-                android:background="@drawable/main_article_2"
-                app:layout_constraintStart_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ImageView
-                android:id="@+id/second_article_1"
-                android:layout_width="165dp"
-                android:layout_height="150dp"
-                android:layout_marginStart="5dp"
-                android:layout_marginBottom="6dp"
-                android:background="@drawable/secondary_article_1"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/main_article" />
-
-            <ImageView
-                android:id="@+id/second_article_2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/secondary_article_2"
-                app:layout_constraintStart_toEndOf="@+id/second_article_1"
-                app:layout_constraintTop_toBottomOf="@+id/main_article" />
-
-            <ImageView
-                android:id="@+id/article_menu_1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="159dp"
-                android:layout_marginBottom="6dp"
-                app:layout_constraintBottom_toBottomOf="@+id/main_article"
-                app:layout_constraintStart_toStartOf="parent"
-                app:srcCompat="@drawable/ellipse_close" />
-
-            <ImageView
-                android:id="@+id/article_menu_2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="176dp"
-                android:layout_marginBottom="6dp"
-                app:layout_constraintBottom_toBottomOf="@+id/main_article"
-                app:layout_constraintStart_toStartOf="parent"
-                app:srcCompat="@drawable/ellipse_close" />
-
-            <ImageView
-                android:id="@+id/article_menu_3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="193dp"
-                android:layout_marginBottom="6dp"
-                app:layout_constraintBottom_toBottomOf="@+id/main_article"
-                app:layout_constraintStart_toStartOf="parent"
-                app:srcCompat="@drawable/ellipse_close" />
-        </androidx.constraintlayout.motion.widget.MotionLayout>
+            app:layout_constraintTop_toBottomOf="@+id/tv_tips_for_you"
+            app:layout_constraintVertical_bias="1.0"
+            tools:listitem="@layout/row_article" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -55,8 +55,8 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
         val authPassword = binding.etPassword.text.toString()
 
         val request = RequestLogin()
-        var token: String? = null
-        var name: String? = null
+        var token: String?
+        var name: String?
         request.email = authEmail
         request.password = authPassword
 

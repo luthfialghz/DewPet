@@ -3,18 +3,35 @@ package com.bangkit.dewpet.activity
 import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
+import android.widget.Toast
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.bangkit.dewpet.activity.detail.DetailArticleActivity
+import com.bangkit.dewpet.adapter.ListArticleAdapter
+import com.bangkit.dewpet.data.api.ApiConfig
+import com.bangkit.dewpet.data.api.ApiService
 import com.bangkit.dewpet.data.preferences.UserPref
+import com.bangkit.dewpet.data.response.ArticleResponse
+import com.bangkit.dewpet.data.response.CheckScheduleResponse
+import com.bangkit.dewpet.data.response.Model
 import com.bangkit.dewpet.features.DewConsulActivity
 import com.bangkit.dewpet.databinding.ActivityMainBinding
 import com.bangkit.dewpet.features.DewCareActivity
 import com.bangkit.dewpet.features.SettingsActivity
+import com.google.android.gms.common.api.Api
+import kotlinx.android.synthetic.main.activity_main.*
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
+    lateinit var listArticleAdapter: ListArticleAdapter
     private lateinit var userPref: UserPref
 
     val PREF_NAME = "AUTH_PREF"
@@ -30,6 +47,9 @@ class MainActivity : AppCompatActivity() {
 
         supportActionBar?.hide()
         userPref = UserPref(this)
+
+        binding.rvArticles.layoutManager = LinearLayoutManager(this)
+        binding.rvArticles.setHasFixedSize(true)
 
         val profileName : String? = sharedPref.getString(KEY_NAME, null)
         Log.e("Homepage", profileName.toString())
@@ -50,5 +70,70 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, DewCareActivity::class.java)
             startActivity(intent)
         }
+    }
+
+    override fun onStart() {
+        super.onStart()
+        setupRecyclerView()
+        getArticle()
+    }
+
+    private fun setupRecyclerView() {
+        listArticleAdapter = ListArticleAdapter(arrayListOf(), object : ListArticleAdapter.onAdapterListener{
+            override fun onClick(result: ArticleResponse.ArticlesItem) {
+//                startActivity(
+//                    Intent(applicationContext, DetailArticleActivity::class.java)
+//                        .putExtra("EXTRA_TITLE", result.title)
+//                        .putExtra("EXTRA_IMAGE", result.urlToImage)
+//                        .putExtra("EXTRA_CONTENT", result.content)
+//                )
+
+                val openURL = Intent(android.content.Intent.ACTION_VIEW)
+                openURL.data = Uri.parse(result.url.toString())
+                startActivity(openURL)
+            }
+
+        })
+        binding.rvArticles.apply {
+            layoutManager = LinearLayoutManager(applicationContext)
+            adapter = listArticleAdapter
+        }
+    }
+
+    private fun getArticle() {
+        pBar.visibility = View.VISIBLE
+        val retrofit = ApiConfig().getRetrofitClientInstance().create(ApiService::class.java)
+        retrofit.articles().enqueue(object : Callback<ArticleResponse> {
+            override fun onResponse(
+                call: Call<ArticleResponse>,
+                response: Response<ArticleResponse>
+            ) {
+                pBar.visibility = View.GONE
+                val result = response.body()
+                if (result != null) {
+                    showData(result)
+                }
+            }
+
+            override fun onFailure(call: Call<ArticleResponse>, t: Throwable) {
+                pBar.visibility = View.GONE
+                printLog(t.message.toString())
+            }
+        })
+
+    }
+
+    private fun printLog(message: String) {
+        Log.e(TAG, message)
+    }
+
+    private fun showData(data: ArticleResponse){
+        val results = data.articles
+        listArticleAdapter.setData(results)
+    }
+
+
+    companion object {
+        const val TAG = "MainActivity"
     }
 }

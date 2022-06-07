@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">DewPet</string>
     <string name="google_maps_key">AIzaSyBoe1nFXXAHW-ED950tM-pG0f-CFlLncfw</string>
+    <string name="news_org_key">f055bc71df734b84b83d42ec2fb0a63c</string>
 
     <!--On Boarding Page-->
     <string name="title_menu_1">Temukan Kebutuhan Peliharanmu</string>
@@ -37,7 +38,7 @@
 
     <!--Toolbar-->
     <string name="toolbar">PetCare terdekat</string>
-    
+
     <string-array name="nearby">
         <item>PetCare</item>
         <item>PetShop</item>
