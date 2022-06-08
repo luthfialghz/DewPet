@@ -21,6 +21,7 @@ import androidx.core.content.ContextCompat
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bangkit.dewpet.R
+import com.bangkit.dewpet.activity.MainActivity
 import com.bangkit.dewpet.data.networking.ParserPlace
 import com.bangkit.dewpet.databinding.ActivityDewCareBinding
 import com.google.android.gms.maps.*
@@ -53,6 +54,11 @@ class DewCareActivity : AppCompatActivity(), LocationListener {
         setContentView(binding.root)
 
         supportActionBar?.hide()
+        binding.flBack.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
         val spinnerCari = binding.spnCari
         pBar = binding.pBar
 
@@ -149,11 +155,11 @@ class DewCareActivity : AppCompatActivity(), LocationListener {
     }
 
     private fun startProg() {
-        binding.pBar.visibility = View.GONE
+        binding.pBar.visibility = View.VISIBLE
     }
 
     private fun stopProg() {
-        binding.pBar.visibility = View.VISIBLE
+        binding.pBar.visibility = View.GONE
     }
 
     @SuppressLint("StaticFieldLeak")

@@ -31,6 +31,7 @@ class DewVetActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         supportActionBar?.hide()
+
     }
 
     override fun onStart() {

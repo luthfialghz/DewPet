@@ -8,6 +8,8 @@
         <entry key="..\:/Users/luthf/Desktop/Capstone-Project---DewPet-Bangkit-2022-android/app/src/main/res/drawable/bg_rounded_bottom.xml" value="0.176" />
         <entry key="..\:/Users/luthf/Desktop/Capstone-Project---DewPet-Bangkit-2022-android/app/src/main/res/drawable/bg_rounded_top.xml" value="0.176" />
         <entry key="..\:/Users/luthf/Desktop/Capstone-Project---DewPet-Bangkit-2022-android/app/src/main/res/drawable/button_rectangle.xml" value="0.231" />
+        <entry key="..\:/Users/luthf/Desktop/Capstone-Project---DewPet-Bangkit-2022-android/app/src/main/res/drawable/dew_consul.xml" value="0.231" />
+        <entry key="..\:/Users/luthf/Desktop/Capstone-Project---DewPet-Bangkit-2022-android/app/src/main/res/drawable/dew_tech.xml" value="0.231" />
         <entry key="..\:/Users/luthf/Desktop/Capstone-Project---DewPet-Bangkit-2022-android/app/src/main/res/drawable/ic_circle_24.xml" value="0.3105" />
         <entry key="..\:/Users/luthf/Desktop/Capstone-Project---DewPet-Bangkit-2022-android/app/src/main/res/drawable/ic_circle_full_24.xml" value="0.3105" />
         <entry key="..\:/Users/luthf/Desktop/Capstone-Project---DewPet-Bangkit-2022-android/app/src/main/res/drawable/ic_codicon_account.xml" value="0.3105" />
@@ -27,7 +29,7 @@
         <entry key="..\:/Users/luthf/Desktop/Capstone-Project---DewPet-Bangkit-2022-android/app/src/main/res/layout/activity_dew_care.xml" value="0.22" />
         <entry key="..\:/Users/luthf/Desktop/Capstone-Project---DewPet-Bangkit-2022-android/app/src/main/res/layout/activity_dew_care_route.xml" value="0.25" />
         <entry key="..\:/Users/luthf/Desktop/Capstone-Project---DewPet-Bangkit-2022-android/app/src/main/res/layout/activity_dew_consul.xml" value="0.34692028985507245" />
-        <entry key="..\:/Users/luthf/Desktop/Capstone-Project---DewPet-Bangkit-2022-android/app/src/main/res/layout/activity_dew_vet.xml" value="0.10916919959473151" />
+        <entry key="..\:/Users/luthf/Desktop/Capstone-Project---DewPet-Bangkit-2022-android/app/src/main/res/layout/activity_dew_vet.xml" value="0.22" />
         <entry key="..\:/Users/luthf/Desktop/Capstone-Project---DewPet-Bangkit-2022-android/app/src/main/res/layout/activity_history.xml" value="0.21041666666666667" />
         <entry key="..\:/Users/luthf/Desktop/Capstone-Project---DewPet-Bangkit-2022-android/app/src/main/res/layout/activity_login.xml" value="0.4024390243902439" />
         <entry key="..\:/Users/luthf/Desktop/Capstone-Project---DewPet-Bangkit-2022-android/app/src/main/res/layout/activity_main.xml" value="0.33" />
