@@ -11,11 +11,12 @@ data class VetAppointmentStatusResponse(
 	val status: String? = null
 ) {
 
-
 	data class DataItem(
-
 		@field:SerializedName("approved")
 		val approved: String? = null,
+
+		@field:SerializedName("service_id")
+		val serviceId: Int? = null,
 
 		@field:SerializedName("client_email")
 		val clientEmail: String? = null,
@@ -38,5 +39,4 @@ data class VetAppointmentStatusResponse(
 		@field:SerializedName("namaL")
 		val namaL: String? = null
 	)
-
 }

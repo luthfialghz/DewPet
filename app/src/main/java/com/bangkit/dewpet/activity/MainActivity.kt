@@ -81,13 +81,6 @@ class MainActivity : AppCompatActivity() {
     private fun setupRecyclerView() {
         listArticleAdapter = ListArticleAdapter(arrayListOf(), object : ListArticleAdapter.onAdapterListener{
             override fun onClick(result: ArticleResponse.ArticlesItem) {
-//                startActivity(
-//                    Intent(applicationContext, DetailArticleActivity::class.java)
-//                        .putExtra("EXTRA_TITLE", result.title)
-//                        .putExtra("EXTRA_IMAGE", result.urlToImage)
-//                        .putExtra("EXTRA_CONTENT", result.content)
-//                )
-
                 val openURL = Intent(android.content.Intent.ACTION_VIEW)
                 openURL.data = Uri.parse(result.url.toString())
                 startActivity(openURL)

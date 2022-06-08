@@ -37,4 +37,14 @@ interface ApiService {
     fun statusAppointment(
         @Body userRequest: RequestAppointmentStatus
     ) : Call<VetAppointmentStatusResponse>
+
+    @DELETE("hapus/{id}")
+    fun deleteAppointment(
+        @Path("id") id: Int
+    ): Call<DeleteVetAppointmentStatusResponse>
+
+    @POST("edited")
+    fun editAppointment(
+        @Body userRequest: RequestEditAppointment
+    ): Call<EditVetAppointmentResponse>
 }
