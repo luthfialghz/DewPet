@@ -8,7 +8,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bangkit.dewpet.R
 import com.bangkit.dewpet.data.response.ArticleResponse
 import com.bumptech.glide.Glide
-import kotlinx.android.synthetic.main.activity_detail_article.view.*
 import kotlinx.android.synthetic.main.row_article.view.*
 
 class ListArticleAdapter(val results : ArrayList<ArticleResponse.ArticlesItem>, val listener: onAdapterListener)

@@ -4,9 +4,9 @@
     <string name="news_org_key">f055bc71df734b84b83d42ec2fb0a63c</string>
 
     <!--On Boarding Page-->
-    <string name="title_menu_1">Temukan Kebutuhan Peliharanmu</string>
-    <string name="title_menu_2">Temukan Kebutuhan Peliharanmu</string>
-    <string name="title_menu_3">Temukan Kebutuhan Peliharanmu</string>
+    <string name="title_menu_1">Deteksi Penyakit Peliharaanmu Sejak Dini</string>
+    <string name="title_menu_2">Mencari Lokasi Pet Care dan Pet Shop Terdekat</string>
+    <string name="title_menu_3">Buat Janji dengan Dokter</string>
 
     <string name="desc_menu_1">Kami menyediakan beragam kebutuhan hewan peliharaan Anda. Dari makanan hingga perlengkapan pendukung.</string>
     <string name="desc_menu_2">Kami menyediakan beragam kebutuhan hewan peliharaan Anda. Dari makanan hingga perlengkapan pendukung.</string>
@@ -29,8 +29,8 @@
     <string name="save_me">Biarkan aku tetap masuk</string>
 
     <!--Home Page-->
-    <string name="hello">"Hello, "</string>
-    <string name="tips_for_you">Tips untukmu!</string>
+    <string name="hello">"Halo, "</string>
+    <string name="tips_for_you">Berita Terkini!</string>
 
     <!--Settings Page-->
     <string name="logout">Keluar</string>

@@ -1,7 +1,6 @@
 package com.bangkit.dewpet.data.api
 
-import com.bangkit.dewpet.data.request.RequestLogin
-import com.bangkit.dewpet.data.request.RequestRegister
+import com.bangkit.dewpet.data.request.*
 import com.bangkit.dewpet.data.response.*
 import retrofit2.Call
 import retrofit2.http.*
@@ -22,8 +21,20 @@ interface ApiService {
     fun articles() : Call<ArticleResponse>
 
     @GET("jadwalcek")
-    fun checkAppoinment() : Call<CheckScheduleResponse>
-//
-//    @GET("vet")
-//    fun doctor(): Call<DoctorListResponse>
+    fun vetSchedule() : Call<VetResponse>
+
+    @POST("login/checklogin")
+    fun getUser(
+        @Body userRequest: RequestUser
+    ) : Call<UserResponse>
+
+    @POST("appointment")
+    fun reqAppointment(
+        @Body userRequest: RequestAppointment
+    ) : Call<VetAppointmentResponse>
+
+    @POST("jadwalbook")
+    fun statusAppointment(
+        @Body userRequest: RequestAppointmentStatus
+    ) : Call<VetAppointmentStatusResponse>
 }

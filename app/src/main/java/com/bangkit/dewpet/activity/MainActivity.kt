@@ -8,21 +8,16 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
-import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.bangkit.dewpet.activity.detail.DetailArticleActivity
 import com.bangkit.dewpet.adapter.ListArticleAdapter
 import com.bangkit.dewpet.data.api.ApiConfig
 import com.bangkit.dewpet.data.api.ApiService
 import com.bangkit.dewpet.data.preferences.UserPref
 import com.bangkit.dewpet.data.response.ArticleResponse
-import com.bangkit.dewpet.data.response.CheckScheduleResponse
-import com.bangkit.dewpet.data.response.Model
-import com.bangkit.dewpet.features.DewConsulActivity
+import com.bangkit.dewpet.features.DewVetActivity
 import com.bangkit.dewpet.databinding.ActivityMainBinding
 import com.bangkit.dewpet.features.DewCareActivity
 import com.bangkit.dewpet.features.SettingsActivity
-import com.google.android.gms.common.api.Api
 import kotlinx.android.synthetic.main.activity_main.*
 import retrofit2.Call
 import retrofit2.Callback
@@ -57,7 +52,7 @@ class MainActivity : AppCompatActivity() {
 
 
         binding.ivDewConsul.setOnClickListener{
-            val intent = Intent(this, DewConsulActivity::class.java)
+            val intent = Intent(this, DewVetActivity::class.java)
             startActivity(intent)
         }
 
@@ -68,6 +63,11 @@ class MainActivity : AppCompatActivity() {
 
         binding.ivDewCare.setOnClickListener {
             val intent = Intent(this, DewCareActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.ivDewAdopt.setOnClickListener {
+            val intent = Intent(this, HistoryActivity::class.java)
             startActivity(intent)
         }
     }
@@ -120,7 +120,6 @@ class MainActivity : AppCompatActivity() {
                 printLog(t.message.toString())
             }
         })
-
     }
 
     private fun printLog(message: String) {

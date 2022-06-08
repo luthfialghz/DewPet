@@ -12,7 +12,6 @@ class ApiConfig {
         val gson = GsonBuilder().setLenient().create()
         return Retrofit.Builder()
             .baseUrl("https://dewpetproject.et.r.appspot.com/")
-            .addConverterFactory(nullOnEmptyConverterFactory)
             .addConverterFactory(GsonConverterFactory.create(gson))
             .build()
     }
