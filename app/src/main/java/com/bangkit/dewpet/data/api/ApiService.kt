@@ -48,6 +48,6 @@ interface ApiService {
         @Body userRequest: RequestEditAppointment
     ): Call<EditVetAppointmentResponse>
 
-    @GET("listgejala")
-    fun listIndication(): Call<IndicationResponse>
+    @GET("listgejala2")
+    fun listIndication(): Call<IndicatorResponse>
 }

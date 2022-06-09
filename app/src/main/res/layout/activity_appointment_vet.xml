@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="TextView"
+        android:text="@string/vet_name"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -21,7 +21,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="TextView"
+        android:text="@string/vet_loc"
         app:layout_constraintEnd_toEndOf="@+id/tv_vet_name"
         app:layout_constraintStart_toStartOf="@+id/tv_vet_name"
         app:layout_constraintTop_toBottomOf="@+id/tv_vet_name" />
@@ -32,7 +32,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="8dp"
-        android:text="Waktu Operasional :"
+        android:text="@string/operational_time"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_vet_location" />
 
@@ -42,7 +42,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="8dp"
-        android:text="Hari"
+        android:text="@string/vet_day"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_vet_date" />
 
@@ -52,7 +52,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="TextView"
+        android:text="@string/vet_open"
         app:layout_constraintStart_toEndOf="@+id/tv_vet_day"
         app:layout_constraintTop_toBottomOf="@+id/tv_vet_date" />
 
@@ -62,7 +62,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="s/d"
+        android:text="@string/vet_until"
         app:layout_constraintStart_toEndOf="@+id/tv_vet_open"
         app:layout_constraintTop_toBottomOf="@+id/tv_vet_date" />
 
@@ -72,7 +72,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="TextView"
+        android:text="@string/vet_close"
         app:layout_constraintStart_toEndOf="@+id/tv_until"
         app:layout_constraintTop_toBottomOf="@+id/tv_vet_date" />
 
@@ -81,7 +81,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Pilih Jadwal"
+        android:text="@string/choose_schedule"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_vet_close" />
@@ -91,7 +91,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="Jadwal dipilih : "
+        android:text="@string/choose_schedule"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_date" />
@@ -101,7 +101,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="Pilih jadwal terlebih dahulu"
+        android:text="@string/choose_schedule_first"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_title_date" />
@@ -112,7 +112,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="32dp"
-        android:text="Masukkan Pesan :"
+        android:text="@string/input_complaint"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_date_picker" />
 
@@ -125,7 +125,7 @@
         android:layout_marginEnd="24dp"
         android:ems="10"
         android:gravity="start|top"
-        android:hint="Desripsikan Keluhan"
+        android:hint="@string/desc_complaint"
         android:inputType="textMultiLine"
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -138,7 +138,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="72dp"
-        android:text="Buat Janji"
+        android:text="@string/make_appointment"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

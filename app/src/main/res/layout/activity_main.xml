@@ -27,7 +27,7 @@
             android:layout_marginTop="32dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_icon_person" />
+            app:srcCompat="@drawable/true_logo_blue" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/cl_data_user"

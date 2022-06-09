@@ -169,6 +169,6 @@ class AppointmentVetActivity : AppCompatActivity(), DatePickerDialog.OnDateSetLi
         myHour = hourOfDay
         myMinute = minute
 
-        tv_date_picker.text = "$myYear-$myMonth-$myDay $myHour:$myMinute:00"
+        tv_date_picker.text = "$myYear-$myMonth-$myDay $myHour:$myMinute"
     }
 }

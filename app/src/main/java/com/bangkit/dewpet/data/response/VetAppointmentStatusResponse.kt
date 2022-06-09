@@ -10,8 +10,8 @@ data class VetAppointmentStatusResponse(
 	@field:SerializedName("status")
 	val status: String? = null
 ) {
-
 	data class DataItem(
+
 		@field:SerializedName("approved")
 		val approved: String? = null,
 

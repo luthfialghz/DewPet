@@ -108,10 +108,9 @@ class HistoryActivity() : AppCompatActivity() {
             override fun onEdit(result: VetAppointmentStatusResponse.DataItem) {
                 val dateInString = result.startAt.toString()
                 val inputFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'", Locale.ENGLISH)
-                val outputFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH-mm-ss", Locale.ENGLISH)
+                val outputFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm", Locale.ENGLISH)
                 val date = LocalDateTime.parse(dateInString, inputFormatter)
                 val formattedDate = outputFormatter.format(date)
-                System.out.println(formattedDate)
                 startActivity(
                     Intent(applicationContext, StatusDetailActivity::class.java)
                         .putExtra("EXTRA_LOCATION", result.location)
@@ -119,6 +118,7 @@ class HistoryActivity() : AppCompatActivity() {
                         .putExtra("EXTRA_COMPLAINT", result.message)
                         .putExtra("EXTRA_VET_SERVICE", result.serviceId)
                         .putExtra("EXTRA_VET_STATUS", result.id)
+                        .putExtra("EXTRA_VET_NAME", result.namaL)
                 )
                 finish()
             }

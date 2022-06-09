@@ -26,9 +26,10 @@ class ListStatusAdapter(val results : ArrayList<VetAppointmentStatusResponse.Dat
         val result = results[position]
         holder.view.tv_vet_location.text = result.location
         holder.view.tv_vet_complaint.text = result.message
+        holder.view.tv_vet_name.text = result.namaL
         val dateInString = result.startAt.toString()
         val inputFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'", Locale.ENGLISH)
-        val outputFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH-mm", Locale.ENGLISH)
+        val outputFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm", Locale.ENGLISH)
         val date = LocalDateTime.parse(dateInString, inputFormatter)
         val formattedDate = outputFormatter.format(date)
         holder.view.tv_vet_date.text = formattedDate

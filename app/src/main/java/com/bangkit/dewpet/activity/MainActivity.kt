@@ -14,10 +14,8 @@ import com.bangkit.dewpet.data.api.ApiConfig
 import com.bangkit.dewpet.data.api.ApiService
 import com.bangkit.dewpet.data.preferences.UserPref
 import com.bangkit.dewpet.data.response.ArticleResponse
-import com.bangkit.dewpet.features.DewVetActivity
 import com.bangkit.dewpet.databinding.ActivityMainBinding
-import com.bangkit.dewpet.features.DewCareActivity
-import com.bangkit.dewpet.features.SettingsActivity
+import com.bangkit.dewpet.features.*
 import kotlinx.android.synthetic.main.activity_main.*
 import retrofit2.Call
 import retrofit2.Callback
@@ -68,6 +66,16 @@ class MainActivity : AppCompatActivity() {
 
         binding.ivDewAdopt.setOnClickListener {
             val intent = Intent(this, HistoryActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.ivDewStore.setOnClickListener {
+            val intent = Intent(this, DewStoreActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.ivDewTec.setOnClickListener {
+            val intent = Intent(this, DewTecActivity::class.java)
             startActivity(intent)
         }
     }

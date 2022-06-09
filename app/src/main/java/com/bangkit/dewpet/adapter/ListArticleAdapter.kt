@@ -9,6 +9,10 @@ import com.bangkit.dewpet.R
 import com.bangkit.dewpet.data.response.ArticleResponse
 import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.row_article.view.*
+import java.time.LocalDateTime
+import java.time.format.DateTimeFormatter
+import java.util.*
+import kotlin.collections.ArrayList
 
 class ListArticleAdapter(val results : ArrayList<ArticleResponse.ArticlesItem>, val listener: onAdapterListener)
     : RecyclerView.Adapter<ListArticleAdapter.ViewHolder>() {
@@ -21,7 +25,12 @@ class ListArticleAdapter(val results : ArrayList<ArticleResponse.ArticlesItem>, 
         val result = results[position]
         holder.view.tvTitle.text = result.title
         holder.view.tvSource.text = result.author
-        holder.view.tvPublishedAt.text = result.publishedAt
+        val dateInString = result.publishedAt
+        val inputFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss'Z'", Locale.ENGLISH)
+        val outputFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm", Locale.ENGLISH)
+        val date = LocalDateTime.parse(dateInString, inputFormatter)
+        val formattedDate = outputFormatter.format(date)
+        holder.view.tvPublishedAt.text = formattedDate
         holder.view.tvDescription.text = result.description
         Log.e("Image", "result image : ${result.urlToImage}")
         Glide.with(holder.view)

@@ -32,12 +32,16 @@ class StatusDetailActivity : AppCompatActivity(), DatePickerDialog.OnDateSetList
         binding = ActivityStatusDetailBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        supportActionBar?.hide()
+
         binding.tvVetLocation.text = intent.getStringExtra("EXTRA_LOCATION")
 
         val start_at = intent.getStringExtra("EXTRA_DATE")
         binding.tvVetDate.text = start_at
         val message = intent.getStringExtra("EXTRA_COMPLAINT")
         binding.etMessages.setText(message, TextView.BufferType.EDITABLE)
+        val veterin = intent.getStringExtra("EXTRA_VET_NAME")
+        binding.tvVetName.text = veterin
         val service_id = intent.getIntExtra("EXTRA_VET_SERVICE", 0)
         val id = intent.getIntExtra("EXTRA_VET_STATUS", 0)
 
@@ -45,6 +49,12 @@ class StatusDetailActivity : AppCompatActivity(), DatePickerDialog.OnDateSetList
         request.id = id
         request.service_id = service_id
         Log.e("Service", service_id.toString())
+
+        binding.tvBackStatus.setOnClickListener {
+            val intent = Intent(this, HistoryActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
 
         pickDate()
         binding.btnSubmitChange.setOnClickListener {
@@ -107,7 +117,7 @@ class StatusDetailActivity : AppCompatActivity(), DatePickerDialog.OnDateSetList
         myHour = hourOfDay
         myMinute = minute
 
-        binding.tvVetDate.text = "${myYear}-${myMonth}-${myDay} ${myHour}:${myMinute}:00"
+        binding.tvVetDate.text = "${myYear}-${myMonth}-${myDay} ${myHour}:${myMinute}"
     }
 
     companion object {

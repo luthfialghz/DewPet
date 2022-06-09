@@ -46,4 +46,25 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
+    <!--Appointment Vet-->
+    <string name="operational_time">Waktu Operasional</string>
+    <string name="choose_schedule">Pilih Jadwal :</string>
+    <string name="choosed_schedule">Jadwal dipilih : </string>
+    <string name="choose_schedule_first">Pilih jadwal terlebih dahulu</string>
+    <string name="input_complaint">Masukkan keluhan : </string>
+    <string name="desc_complaint">Deskripsikan keluhan</string>
+    <string name="make_appointment">Buat Janji</string>
+    <string name="vet_name">Nama Dokter</string>
+    <string name="vet_loc">Lokasi Dokter</string>
+    <string name="vet_day">Hari</string>
+    <string name="vet_open">Buka</string>
+    <string name="vet_until">s/d</string>
+    <string name="vet_close">Tutup</string>
+
+    <!--DewTec-->
+    <string name="input_indication">Masukkan Gejala</string>
+
+    <!--DewStore-->
+    <string name="comingsoon">Halaman ini belum tersedia</string>
+
 </resources>
