@@ -39,7 +39,7 @@
         android:layout_marginTop="8dp"
         android:text="Status :"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_vet_location" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_date_title" />
 
     <TextView
         android:id="@+id/tv_vet_complaint_title"
@@ -59,7 +59,7 @@
         android:layout_marginTop="8dp"
         android:text="Status"
         app:layout_constraintStart_toEndOf="@+id/tv_vet_status_title"
-        app:layout_constraintTop_toBottomOf="@+id/tv_vet_location" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_date_title" />
 
     <TextView
         android:id="@+id/tv_vet_complaint"
@@ -92,4 +92,24 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btn_vet_delete"
         app:layout_constraintTop_toBottomOf="@+id/tv_vet_complaint_title" />
+
+    <TextView
+        android:id="@+id/tv_date_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Jadwal :"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_vet_location" />
+
+    <TextView
+        android:id="@+id/tv_vet_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Jadwal"
+        app:layout_constraintStart_toEndOf="@+id/tv_date_title"
+        app:layout_constraintTop_toBottomOf="@+id/tv_vet_location" />
 </androidx.constraintlayout.widget.ConstraintLayout>

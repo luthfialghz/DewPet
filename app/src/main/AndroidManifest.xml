@@ -17,6 +17,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DewPet">
         <activity
+            android:name=".DewTecActivity"
+            android:exported="false" />
+        <activity
             android:name=".activity.detail.StatusDetailActivity"
             android:exported="false" />
         <activity

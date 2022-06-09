@@ -5,10 +5,12 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bangkit.dewpet.R
-import com.bangkit.dewpet.data.response.ArticleResponse
 import com.bangkit.dewpet.data.response.VetAppointmentStatusResponse
-import com.bangkit.dewpet.data.response.VetResponse
 import kotlinx.android.synthetic.main.row_status.view.*
+import java.time.LocalDateTime
+import java.time.format.DateTimeFormatter
+import java.util.*
+import kotlin.collections.ArrayList
 
 class ListStatusAdapter(val results : ArrayList<VetAppointmentStatusResponse.DataItem>, val listener: ListStatusAdapter.onAdapterListener) :
     RecyclerView.Adapter<ListStatusAdapter.ViewHolder>(){
@@ -24,6 +26,12 @@ class ListStatusAdapter(val results : ArrayList<VetAppointmentStatusResponse.Dat
         val result = results[position]
         holder.view.tv_vet_location.text = result.location
         holder.view.tv_vet_complaint.text = result.message
+        val dateInString = result.startAt.toString()
+        val inputFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'", Locale.ENGLISH)
+        val outputFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH-mm", Locale.ENGLISH)
+        val date = LocalDateTime.parse(dateInString, inputFormatter)
+        val formattedDate = outputFormatter.format(date)
+        holder.view.tv_vet_date.text = formattedDate
         if (result.approved == "waiting"){
             holder.view.tv_vet_status.text = "Menunggu persetujuan dokter"
         }

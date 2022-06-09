@@ -64,13 +64,14 @@ class AppointmentVetActivity : AppCompatActivity(), DatePickerDialog.OnDateSetLi
     private fun pickDate() {
         btn_date.setOnClickListener {
             getDateTimeCalendar()
-            DatePickerDialog(this,this, year, month, day).show()
+            val datePicker = DatePickerDialog(this,this, year, month, day)
+            datePicker.datePicker.setMinDate(cal.timeInMillis)
+            datePicker.show()
 
         }
     }
 
     private fun getDateTimeCalendar() {
-        val cal = Calendar.getInstance()
         day = cal.get(Calendar.DAY_OF_MONTH)
         month = cal.get(Calendar.MONTH)
         year = cal.get(Calendar.YEAR)
@@ -139,6 +140,7 @@ class AppointmentVetActivity : AppCompatActivity(), DatePickerDialog.OnDateSetLi
     }
 
     companion object {
+        val cal = Calendar.getInstance()
         var day = 0
         var month: Int = 0
         var year: Int = 0

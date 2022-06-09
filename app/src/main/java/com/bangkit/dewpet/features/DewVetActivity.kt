@@ -32,6 +32,11 @@ class DewVetActivity : AppCompatActivity() {
 
         supportActionBar?.hide()
 
+        binding.ivBackButton.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
     }
 
     override fun onStart() {

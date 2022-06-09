@@ -46,6 +46,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="6dp"
                 android:layout_marginBottom="6dp"
+                android:fontFamily="@font/poppins_bold"
                 android:text="@string/hello"
                 android:textColor="@color/white"
                 android:textSize="16sp"
@@ -60,6 +61,7 @@
                 android:layout_marginTop="6dp"
                 android:layout_marginEnd="16dp"
                 android:layout_marginBottom="6dp"
+                android:fontFamily="@font/poppins_bold"
                 android:text="@string/input_name"
                 android:textColor="@color/white"
                 android:textSize="16sp"
@@ -88,9 +90,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="36dp"
                 android:layout_marginTop="20dp"
+                app:layout_constraintEnd_toEndOf="@+id/iv_dew_care"
                 app:layout_constraintStart_toEndOf="@+id/iv_dew_store"
                 app:layout_constraintTop_toBottomOf="@+id/iv_dew_care"
-                app:srcCompat="@drawable/dew_adopt" />
+                app:srcCompat="@drawable/history" />
 
             <ImageView
                 android:id="@+id/iv_dew_store"
@@ -98,6 +101,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="36dp"
                 android:layout_marginTop="20dp"
+                app:layout_constraintEnd_toEndOf="@+id/iv_dew_consul"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/iv_dew_consul"
                 app:srcCompat="@drawable/dew_store" />
@@ -109,6 +113,7 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginEnd="40dp"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/iv_dew_tec"
                 app:layout_constraintTop_toBottomOf="@+id/iv_dew_tec"
                 app:srcCompat="@drawable/ic_settings" />
 
@@ -120,7 +125,7 @@
                 android:layout_marginTop="33dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/dew_consul"
+                app:srcCompat="@drawable/dew_appoint"
                 tools:ignore="ImageContrastCheck" />
 
             <ImageView
