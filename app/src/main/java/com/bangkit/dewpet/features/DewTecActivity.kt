@@ -4,6 +4,8 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bangkit.dewpet.activity.MainActivity
 import com.bangkit.dewpet.activity.detail.DetailDiagnoseActivity
@@ -41,6 +43,9 @@ class DewTecActivity : AppCompatActivity() {
             startActivity(intent)
             finish()
         }
+        binding.ivClearIndicator.setOnClickListener {
+            recreate()
+        }
         getDisease()
         setupRecyclerView()
     }
@@ -52,6 +57,7 @@ class DewTecActivity : AppCompatActivity() {
                 call: Call<IndicatorResponse>,
                 response: Response<IndicatorResponse>
             ) {
+                startProg()
                 val result = response.body()
                 if (result != null){
                     showData(result.gejala)
@@ -78,21 +84,33 @@ class DewTecActivity : AppCompatActivity() {
 
     private fun showData(data: List<IndicatorResponse.GejalaItem>){
         listIndicatorAdapter.setData(data)
+        stopProg()
         val testing = listIndicatorAdapter.getData()
         testing.observe(this){
             request.penyakit = it
+            binding.tvIndicatorTotal.text = it.toString()
             Log.e("Data", it.toString())
             binding.btnDiagnose.setOnClickListener {
+                startProg()
                 if (rb_cat.isChecked) {
                     request.hewan = rb_cat.text.toString()
+                    Log.e("Penyakit", request.penyakit.toString())
+                    Log.e("Hewan", request.hewan.toString())
+                    getDiagnose()
                 } else if (rb_dog.isChecked){
                     request.hewan = rb_dog.text.toString()
-                } else {
+                    Log.e("Penyakit", request.penyakit.toString())
+                    Log.e("Hewan", request.hewan.toString())
+                    getDiagnose()
+                } else if (rb_rabbit.isChecked) {
                     request.hewan = rb_rabbit.text.toString()
+                    Log.e("Penyakit", request.penyakit.toString())
+                    Log.e("Hewan", request.hewan.toString())
+                    getDiagnose()
+                } else {
+                    Toast.makeText(this,"Masukkan jenis hewan terlebih dahulu", Toast.LENGTH_LONG).show()
+                    stopProg()
                 }
-                Log.e("Penyakit", request.penyakit.toString())
-                Log.e("Hewan", request.hewan.toString())
-                getDiagnose()
             }
         }
     }
@@ -104,6 +122,7 @@ class DewTecActivity : AppCompatActivity() {
                 call: Call<DiagnoseResponse>,
                 response: Response<DiagnoseResponse>
             ) {
+                stopProg()
                 if (response.body() != null){
                     val result = response.body()?.hasil
                     val category = response.body()?.kategori
@@ -135,5 +154,13 @@ class DewTecActivity : AppCompatActivity() {
                 Log.e("Error Diagnose", t.message.toString())
             }
         })
+    }
+
+    private fun startProg() {
+        binding.progressBar.visibility = View.VISIBLE
+    }
+
+    private fun stopProg() {
+        binding.progressBar.visibility = View.GONE
     }
 }

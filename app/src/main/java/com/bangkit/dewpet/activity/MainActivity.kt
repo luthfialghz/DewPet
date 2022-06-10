@@ -13,7 +13,9 @@ import com.bangkit.dewpet.adapter.ListArticleAdapter
 import com.bangkit.dewpet.data.api.ApiConfig
 import com.bangkit.dewpet.data.api.ApiService
 import com.bangkit.dewpet.data.preferences.UserPref
+import com.bangkit.dewpet.data.request.RequestUser
 import com.bangkit.dewpet.data.response.ArticleResponse
+import com.bangkit.dewpet.data.response.UserResponse
 import com.bangkit.dewpet.databinding.ActivityMainBinding
 import com.bangkit.dewpet.features.*
 import kotlinx.android.synthetic.main.activity_main.*
@@ -28,6 +30,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var userPref: UserPref
 
     val PREF_NAME = "AUTH_PREF"
+    val KEY_TOKEN = "key.token"
     val KEY_NAME = "key.name"
 
     lateinit var sharedPref: SharedPreferences
@@ -40,6 +43,10 @@ class MainActivity : AppCompatActivity() {
 
         supportActionBar?.hide()
         userPref = UserPref(this)
+
+        val request = RequestUser()
+        var token : String? = sharedPref.getString(KEY_TOKEN, null)
+        request.token = token
 
         binding.rvArticles.layoutManager = LinearLayoutManager(this)
         binding.rvArticles.setHasFixedSize(true)
@@ -57,15 +64,11 @@ class MainActivity : AppCompatActivity() {
         binding.ivSettings.setOnClickListener {
             val intent = Intent(this, SettingsActivity::class.java)
             startActivity(intent)
+            finish()
         }
 
         binding.ivDewCare.setOnClickListener {
             val intent = Intent(this, DewCareActivity::class.java)
-            startActivity(intent)
-        }
-
-        binding.ivDewAdopt.setOnClickListener {
-            val intent = Intent(this, HistoryActivity::class.java)
             startActivity(intent)
         }
 
@@ -78,11 +81,14 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, DewTecActivity::class.java)
             startActivity(intent)
         }
+
+        getUser(request)
     }
 
     override fun onStart() {
         super.onStart()
         setupRecyclerView()
+        startProg()
         getArticle()
     }
 
@@ -109,7 +115,7 @@ class MainActivity : AppCompatActivity() {
                 call: Call<ArticleResponse>,
                 response: Response<ArticleResponse>
             ) {
-                pBar.visibility = View.GONE
+                startProg()
                 val result = response.body()
                 if (result != null) {
                     showData(result)
@@ -117,10 +123,43 @@ class MainActivity : AppCompatActivity() {
             }
 
             override fun onFailure(call: Call<ArticleResponse>, t: Throwable) {
-                pBar.visibility = View.GONE
+                startProg()
                 printLog(t.message.toString())
             }
         })
+    }
+
+    private fun getUser(request: RequestUser) {
+        val retrofit = ApiConfig().getRetrofitClientInstance().create(ApiService::class.java)
+        retrofit.getUser(request).enqueue(object : Callback<UserResponse>{
+            override fun onResponse(call: Call<UserResponse>, response: Response<UserResponse>) {
+                val data = response.body()
+                val role = data?.role
+                if (role == "user") {
+                    intentByUser()
+                } else {
+                    intentByAdmin()
+                }
+            }
+
+            override fun onFailure(call: Call<UserResponse>, t: Throwable) {
+                printLog(t.message.toString())
+            }
+        })
+    }
+
+    private fun intentByUser() {
+        binding.ivDewAdopt.setOnClickListener {
+            val intent = Intent(this, HistoryActivity::class.java)
+            startActivity(intent)
+        }
+    }
+
+    private fun intentByAdmin() {
+        binding.ivDewAdopt.setOnClickListener {
+            val intent = Intent(this, HistoryAdmin::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun printLog(message: String) {
@@ -130,6 +169,15 @@ class MainActivity : AppCompatActivity() {
     private fun showData(data: ArticleResponse){
         val results = data.articles
         listArticleAdapter.setData(results)
+        stopProg()
+    }
+
+    private fun startProg() {
+        binding.pBar.visibility = View.VISIBLE
+    }
+
+    private fun stopProg() {
+        binding.pBar.visibility = View.GONE
     }
 
 

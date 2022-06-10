@@ -32,7 +32,6 @@ class ListArticleAdapter(val results : ArrayList<ArticleResponse.ArticlesItem>, 
         val formattedDate = outputFormatter.format(date)
         holder.view.tvPublishedAt.text = formattedDate
         holder.view.tvDescription.text = result.description
-        Log.e("Image", "result image : ${result.urlToImage}")
         Glide.with(holder.view)
             .load(result.urlToImage)
             .centerCrop()

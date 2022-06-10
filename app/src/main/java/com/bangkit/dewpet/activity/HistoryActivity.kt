@@ -43,7 +43,7 @@ class HistoryActivity() : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityHistoryBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        supportActionBar?.title = "Appointment Status"
+        supportActionBar?.hide()
 
         sharedPref = getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE)
         binding.rvStatusAppointment.layoutManager = LinearLayoutManager(this)

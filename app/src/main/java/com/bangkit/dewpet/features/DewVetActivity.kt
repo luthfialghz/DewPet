@@ -7,6 +7,7 @@ import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bangkit.dewpet.activity.MainActivity
@@ -73,6 +74,7 @@ class DewVetActivity : AppCompatActivity() {
     }
 
     private fun getVet() {
+        startProg()
         val retrofit = ApiConfig().getRetrofitClientInstance().create(ApiService::class.java)
         retrofit.vetSchedule().enqueue(object : Callback<VetResponse> {
             override fun onResponse(call: Call<VetResponse>, response: Response<VetResponse>) {
@@ -95,6 +97,7 @@ class DewVetActivity : AppCompatActivity() {
     private fun showData(data: VetResponse){
         val results = data.jadwal
         veterinaryAdapter.setData(results)
+        stopProg()
     }
 
     fun setupPermissions() {
@@ -104,6 +107,15 @@ class DewVetActivity : AppCompatActivity() {
             Log.i("Error", "Permission to call denied")
         }
     }
+
+    private fun startProg() {
+        binding.pBar.visibility = View.VISIBLE
+    }
+
+    private fun stopProg() {
+        binding.pBar.visibility = View.GONE
+    }
+
 
     companion object {
         const val TAG = "DewConsul"

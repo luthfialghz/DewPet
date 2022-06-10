@@ -20,18 +20,6 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tv_vet_location"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
-        android:text="Location"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_vet_name" />
-
-    <TextView
         android:id="@+id/tv_vet_status_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -59,7 +47,7 @@
         android:layout_marginTop="8dp"
         android:text="Status"
         app:layout_constraintStart_toEndOf="@+id/tv_vet_status_title"
-        app:layout_constraintTop_toBottomOf="@+id/tv_date_title" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_vet_date" />
 
     <TextView
         android:id="@+id/tv_vet_complaint"
@@ -71,28 +59,6 @@
         app:layout_constraintStart_toEndOf="@+id/tv_vet_complaint_title"
         app:layout_constraintTop_toBottomOf="@+id/tv_vet_status_title" />
 
-    <Button
-        android:id="@+id/btn_cancel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
-        android:text="Batalkan"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_vet_complaint_title" />
-
-    <Button
-        android:id="@+id/btn_edit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="16dp"
-        android:text="Ubah"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btn_cancel"
-        app:layout_constraintTop_toBottomOf="@+id/tv_vet_complaint_title" />
-
     <TextView
         android:id="@+id/tv_date_title"
         android:layout_width="wrap_content"
@@ -101,7 +67,7 @@
         android:layout_marginTop="8dp"
         android:text="Jadwal :"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_vet_location" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_vet_name" />
 
     <TextView
         android:id="@+id/tv_vet_date"
@@ -111,5 +77,27 @@
         android:layout_marginTop="8dp"
         android:text="Jadwal"
         app:layout_constraintStart_toEndOf="@+id/tv_date_title"
-        app:layout_constraintTop_toBottomOf="@+id/tv_vet_location" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_vet_name" />
+
+    <Button
+        android:id="@+id/btn_decline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="Tolak"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_vet_complaint" />
+
+    <Button
+        android:id="@+id/btn_accept"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        android:text="Terima"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_decline"
+        app:layout_constraintTop_toBottomOf="@+id/tv_vet_complaint" />
 </androidx.constraintlayout.widget.ConstraintLayout>

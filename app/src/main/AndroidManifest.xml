@@ -17,6 +17,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DewPet">
         <activity
+            android:name=".activity.HistoryAdmin"
+            android:exported="false" />
+        <activity
             android:name=".activity.detail.DetailDiagnoseActivity"
             android:exported="false" />
         <activity

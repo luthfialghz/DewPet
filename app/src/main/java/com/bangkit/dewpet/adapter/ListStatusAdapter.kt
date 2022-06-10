@@ -35,11 +35,15 @@ class ListStatusAdapter(val results : ArrayList<VetAppointmentStatusResponse.Dat
         holder.view.tv_vet_date.text = formattedDate
         if (result.approved == "waiting"){
             holder.view.tv_vet_status.text = "Menunggu persetujuan dokter"
+        } else if ( result.approved == "no"){
+            holder.view.tv_vet_status.text = "Ditolak"
+        } else if (result.approved == "yes"){
+            holder.view.tv_vet_status.text = "Diterima"
         }
-        holder.view.btn_vet_delete.setOnClickListener {
+        holder.view.btn_cancel.setOnClickListener {
             listener.onClick(result)
         }
-        holder.view.btn_vet_edit.setOnClickListener {
+        holder.view.btn_edit.setOnClickListener {
             listener.onEdit(result)
         }
     }

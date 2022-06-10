@@ -55,4 +55,13 @@ interface ApiService {
     fun diagnose(
         @Body userRequest: RequestDiagnose
     ): Call<DiagnoseResponse>
+
+    @GET("clientlist")
+    fun statusAppointment(): Call<AttachAppointmentStatusResponse>
+
+    @PUT("approve/{id}")
+    fun statusUpdate(
+        @Path("id") id: Int,
+        @Body userRequest: RequestUpdateStatus
+    ): Call<UpdateStatusResponse>
 }

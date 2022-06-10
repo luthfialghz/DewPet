@@ -17,7 +17,8 @@ import com.bangkit.dewpet.features.DewTecActivity
 import kotlinx.android.synthetic.main.activity_dew_tec.view.*
 import kotlinx.android.synthetic.main.row_indicator.view.*
 
-class ListIndicatorAdapter(val results : ArrayList<IndicatorResponse.GejalaItem>, val listener: ListIndicatorAdapter.onAdapterListener): RecyclerView.Adapter<ListIndicatorAdapter.ViewHolder>() {
+class ListIndicatorAdapter(val results : ArrayList<IndicatorResponse.GejalaItem>, val listener: ListIndicatorAdapter.onAdapterListener):
+    RecyclerView.Adapter<ListIndicatorAdapter.ViewHolder>() {
 
     var mutableListIndicator = ArrayList<String>()
     var indicatorGejala = MutableLiveData<ArrayList<String>>()
@@ -48,11 +49,11 @@ class ListIndicatorAdapter(val results : ArrayList<IndicatorResponse.GejalaItem>
     override fun onBindViewHolder(holder: ListIndicatorAdapter.ViewHolder, position: Int) {
         val data = results[position]
         val indicatorName = data.namaGejala
-        holder.view.cb_vet_indicator.text = indicatorName
-        val indicator = holder.view.cb_vet_indicator
+        holder.view.btn_vet_indicator.text = indicatorName
+        val indicator = holder.view.btn_vet_indicator
 
         indicator.setOnClickListener {
-            if (indicator.isChecked){
+            if (indicator.isClickable){
                 mutableListIndicator.add(indicatorName.toString())
                 val mutableLiveData = mutableListIndicator
                 indicatorGejala.value = mutableLiveData
