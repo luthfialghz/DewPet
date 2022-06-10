@@ -5,6 +5,7 @@ import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bangkit.dewpet.activity.detail.StatusDetailActivity
@@ -56,6 +57,7 @@ class HistoryActivity() : AppCompatActivity() {
 
         setupRecyclerView()
         getUser(request)
+        startProg()
     }
 
     private fun getUser(request: RequestUser){
@@ -133,6 +135,7 @@ class HistoryActivity() : AppCompatActivity() {
     private fun showData(data: VetAppointmentStatusResponse){
         val results = data.data
         listStatusAdapter.setData(results)
+        stopProg()
     }
 
     private fun deleteStatus(id: Int) {
@@ -150,5 +153,13 @@ class HistoryActivity() : AppCompatActivity() {
                 Log.e("Error Delete", t.message.toString())
             }
         })
+    }
+
+    private fun startProg() {
+        binding.pBar.visibility = View.VISIBLE
+    }
+
+    private fun stopProg() {
+        binding.pBar.visibility = View.GONE
     }
 }

@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bangkit.dewpet.R
 import com.bangkit.dewpet.activity.detail.StatusDetailActivity
@@ -40,6 +41,7 @@ class HistoryAdmin : AppCompatActivity() {
 
         getAppointment()
         setupRecyclerView()
+        startProg()
     }
 
     private fun getAppointment() {
@@ -105,6 +107,15 @@ class HistoryAdmin : AppCompatActivity() {
     private fun showData(data: AttachAppointmentStatusResponse){
         val results = data.data
         listStatusAdminAdapter.setData(results)
+        stopProg()
+    }
+
+    private fun startProg() {
+        binding.pBar.visibility = View.VISIBLE
+    }
+
+    private fun stopProg() {
+        binding.pBar.visibility = View.GONE
     }
 
 }

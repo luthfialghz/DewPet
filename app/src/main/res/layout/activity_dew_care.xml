@@ -60,8 +60,7 @@
             android:id="@+id/spnCari"
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:layout_centerInParent="true"
-            android:layout_centerHorizontal="true" />
+            android:layout_centerInParent="true" />
 
     </RelativeLayout>
 
