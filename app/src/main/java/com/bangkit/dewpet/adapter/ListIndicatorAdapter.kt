@@ -56,6 +56,8 @@ class ListIndicatorAdapter(val results : ArrayList<IndicatorResponse.GejalaItem>
                 mutableListIndicator.add(indicatorName.toString())
                 val mutableLiveData = mutableListIndicator
                 indicatorGejala.value = mutableLiveData
+            } else {
+                indicatorGejala.value?.remove(indicatorName.toString())
             }
         }
     }

@@ -20,6 +20,8 @@ class DetailDiagnoseActivity : AppCompatActivity() {
 
         binding.tvDisease.text = intent.getStringExtra("EXTRA_DISEASE")
         binding.tvDiseaseCategory.text = intent.getStringExtra("EXTRA_CATEGORY")
+        binding.tvDiseaseEng.text = intent.getStringExtra("EXTRA_DISEASE_EN")
+        binding.tvDiseaseEtc.text = intent.getStringExtra("EXTRA_ETC")
 
         binding.btnBackToMenu.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)

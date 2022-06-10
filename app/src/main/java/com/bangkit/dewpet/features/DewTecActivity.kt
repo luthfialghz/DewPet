@@ -20,7 +20,6 @@ import kotlinx.android.synthetic.main.activity_dew_tec.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-import kotlin.collections.ArrayList
 
 class DewTecActivity : AppCompatActivity() {
 
@@ -32,6 +31,7 @@ class DewTecActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityDewTecBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        supportActionBar?.hide()
 
         binding.rvIndicator.layoutManager = LinearLayoutManager(this)
         binding.rvIndicator.setHasFixedSize(true)
@@ -80,9 +80,8 @@ class DewTecActivity : AppCompatActivity() {
         listIndicatorAdapter.setData(data)
         val testing = listIndicatorAdapter.getData()
         testing.observe(this){
-            Log.e("E", it.toString())
-            binding.tvIndicatorTotal.text = it.toString()
             request.penyakit = it
+            Log.e("Data", it.toString())
             binding.btnDiagnose.setOnClickListener {
                 if (rb_cat.isChecked) {
                     request.hewan = rb_cat.text.toString()
@@ -108,14 +107,28 @@ class DewTecActivity : AppCompatActivity() {
                 if (response.body() != null){
                     val result = response.body()?.hasil
                     val category = response.body()?.kategori
-                    val disease = result?.id
-
-                    val intent = Intent(this@DewTecActivity, DetailDiagnoseActivity::class.java)
-                        .putExtra("EXTRA_DISEASE", disease.toString())
-                        .putExtra("EXTRA_CATEGORY", category.toString())
-                    startActivity(intent)
-                    finish()
+                    val disease = "${result?.id} (Bahasa Indonesia)"
+                    val diseaseEng = "${result?.en} (Bahasa Inggris)"
+                    if (category == "Minor") {
+                        val etc = "Dapat dirawat sendiri dengan obat obatan yang tersedia di PetCare"
+                        val mCategory = "Penyakit Kategori Ringan"
+                        intent(disease, mCategory, diseaseEng, etc)
+                    } else {
+                        val etc = "Segera Hubungi vet atau pergi ke PetCare"
+                        val mCategory= "Penyakit Kategori Berat"
+                        intent(disease, mCategory, diseaseEng, etc)
+                    }
                 }
+            }
+
+            private fun intent(disease: String?, category: String?, diseaseEng:String?, etc:String?){
+                val intent = Intent(this@DewTecActivity, DetailDiagnoseActivity::class.java)
+                    .putExtra("EXTRA_DISEASE", disease.toString())
+                    .putExtra("EXTRA_CATEGORY", category.toString())
+                    .putExtra("EXTRA_DISEASE_EN", diseaseEng.toString())
+                    .putExtra("EXTRA_ETC", etc.toString())
+                startActivity(intent)
+                finish()
             }
 
             override fun onFailure(call: Call<DiagnoseResponse>, t: Throwable) {
