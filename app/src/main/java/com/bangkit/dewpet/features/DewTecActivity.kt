@@ -1,29 +1,32 @@
 package com.bangkit.dewpet.features
 
 import android.content.Intent
-import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.widget.ListAdapter
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.bangkit.dewpet.R
+import com.bangkit.dewpet.activity.MainActivity
+import com.bangkit.dewpet.activity.detail.DetailDiagnoseActivity
 import com.bangkit.dewpet.adapter.ListArticleAdapter
-import com.bangkit.dewpet.adapter.ListIndicationAdapter
+import com.bangkit.dewpet.adapter.ListIndicatorAdapter
 import com.bangkit.dewpet.data.api.ApiConfig
 import com.bangkit.dewpet.data.api.ApiService
-import com.bangkit.dewpet.data.response.ArticleResponse
+import com.bangkit.dewpet.data.request.RequestDiagnose
+import com.bangkit.dewpet.data.request.RequestLogin
+import com.bangkit.dewpet.data.response.DiagnoseResponse
 import com.bangkit.dewpet.data.response.IndicatorResponse
 import com.bangkit.dewpet.databinding.ActivityDewTecBinding
+import kotlinx.android.synthetic.main.activity_dew_tec.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import kotlin.collections.ArrayList
 
 class DewTecActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityDewTecBinding
-    lateinit var listIndicationAdapter: ListIndicationAdapter
+    lateinit var listIndicatorAdapter: ListIndicatorAdapter
+    val request = RequestDiagnose()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,8 +36,13 @@ class DewTecActivity : AppCompatActivity() {
         binding.rvIndicator.layoutManager = LinearLayoutManager(this)
         binding.rvIndicator.setHasFixedSize(true)
 
-        setupRecyclerView()
+        binding.ivBackDiagnose.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
         getDisease()
+        setupRecyclerView()
     }
 
     private fun getDisease(){
@@ -46,7 +54,7 @@ class DewTecActivity : AppCompatActivity() {
             ) {
                 val result = response.body()
                 if (result != null){
-                    showData(result)
+                    showData(result.gejala)
                 }
             }
 
@@ -57,26 +65,62 @@ class DewTecActivity : AppCompatActivity() {
     }
 
     private fun setupRecyclerView() {
-        listIndicationAdapter = ListIndicationAdapter(arrayListOf(), object : ListIndicationAdapter.onAdapterListener{
-            override fun onClick(result: IndicatorResponse.GejalaItem) {
-                val item = result.namaGejala
-                Log.e("e", item.toString())
-                val checkbox = binding.rvIndicator
-//                if (checkbox.isSelected){
-//                    val arrayIndicator: ArrayList<String>
-//                    arrayIndicator.add()
-//                }
+        listIndicatorAdapter = ListIndicatorAdapter(arrayListOf(), object : ListIndicatorAdapter.onAdapterListener{
+            override fun onClick(results: IndicatorResponse.GejalaItem) {
             }
 
         })
         binding.rvIndicator.apply {
             layoutManager = LinearLayoutManager(applicationContext)
-            adapter = listIndicationAdapter
+            adapter = listIndicatorAdapter
         }
     }
 
-    private fun showData(data: IndicatorResponse){
-        val results = data.gejala
-        listIndicationAdapter.setData(results)
+    private fun showData(data: List<IndicatorResponse.GejalaItem>){
+        listIndicatorAdapter.setData(data)
+        val testing = listIndicatorAdapter.getData()
+        testing.observe(this){
+            Log.e("E", it.toString())
+            binding.tvIndicatorTotal.text = it.toString()
+            request.penyakit = it
+            binding.btnDiagnose.setOnClickListener {
+                if (rb_cat.isChecked) {
+                    request.hewan = rb_cat.text.toString()
+                } else if (rb_dog.isChecked){
+                    request.hewan = rb_dog.text.toString()
+                } else {
+                    request.hewan = rb_rabbit.text.toString()
+                }
+                Log.e("Penyakit", request.penyakit.toString())
+                Log.e("Hewan", request.hewan.toString())
+                getDiagnose()
+            }
+        }
+    }
+
+    private fun getDiagnose() {
+        val retrofit = ApiConfig().getRetrofitClientInstance().create(ApiService::class.java)
+        retrofit.diagnose(request).enqueue(object : Callback<DiagnoseResponse>{
+            override fun onResponse(
+                call: Call<DiagnoseResponse>,
+                response: Response<DiagnoseResponse>
+            ) {
+                if (response.body() != null){
+                    val result = response.body()?.hasil
+                    val category = response.body()?.kategori
+                    val disease = result?.id
+
+                    val intent = Intent(this@DewTecActivity, DetailDiagnoseActivity::class.java)
+                        .putExtra("EXTRA_DISEASE", disease.toString())
+                        .putExtra("EXTRA_CATEGORY", category.toString())
+                    startActivity(intent)
+                    finish()
+                }
+            }
+
+            override fun onFailure(call: Call<DiagnoseResponse>, t: Throwable) {
+                Log.e("Error Diagnose", t.message.toString())
+            }
+        })
     }
 }

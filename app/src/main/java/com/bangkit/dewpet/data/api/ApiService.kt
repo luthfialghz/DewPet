@@ -50,4 +50,9 @@ interface ApiService {
 
     @GET("listgejala2")
     fun listIndication(): Call<IndicatorResponse>
+
+    @POST("predict")
+    fun diagnose(
+        @Body userRequest: RequestDiagnose
+    ): Call<DiagnoseResponse>
 }

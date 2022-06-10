@@ -73,39 +73,72 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <TextView
+        android:id="@+id/tv_indicator_total_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Gejala yang dipilih :"
+        android:textColor="@color/tiffanyBlue_100"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/cl_diagnose"
+        app:layout_constraintStart_toStartOf="@+id/cl_diagnose"
+        app:layout_constraintTop_toBottomOf="@+id/cl_diagnose" />
+
+    <TextView
         android:id="@+id/tv_indicator_total"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:fontFamily="@font/poppins_regular"
         android:text="Kamu belum memilih gejala"
+        android:textColor="@color/cadetBlue_90"
         android:textSize="12sp"
-        app:layout_constraintEnd_toEndOf="@+id/cl_diagnose"
-        app:layout_constraintStart_toStartOf="@+id/cl_diagnose"
-        app:layout_constraintTop_toBottomOf="@+id/cl_diagnose" />
+        app:layout_constraintEnd_toEndOf="@+id/tv_indicator_total_title"
+        app:layout_constraintStart_toStartOf="@+id/tv_indicator_total_title"
+        app:layout_constraintTop_toBottomOf="@+id/tv_indicator_total_title" />
 
-    <androidx.appcompat.widget.LinearLayoutCompat
-        android:id="@+id/linearLayoutCompat3"
-        android:layout_width="308dp"
+    <RadioGroup
+        android:id="@+id/rg_animal_indicator"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="24dp"
-        android:orientation="vertical"
+        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_indicator_total">
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv_indicator"
+        <RadioButton
+            android:id="@+id/rb_cat"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="16dp"
-            android:layout_marginRight="16dp"
-            tools:layout_marginLeft="16dp"
-            tools:listitem="@layout/row_indicator" />
+            android:layout_height="wrap_content"
+            android:text="kucing" />
 
+        <RadioButton
+            android:id="@+id/rb_dog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="anjing" />
 
-    </androidx.appcompat.widget.LinearLayoutCompat>
+        <RadioButton
+            android:id="@+id/rb_rabbit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="kelinci" />
+    </RadioGroup>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_indicator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rg_animal_indicator"
+        tools:listitem="@layout/row_indicator">
+
+    </androidx.recyclerview.widget.RecyclerView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

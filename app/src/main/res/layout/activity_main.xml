@@ -76,7 +76,7 @@
             android:id="@+id/cl_features"
             android:layout_width="340dp"
             android:layout_height="239dp"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="32dp"
             android:background="@drawable/rectangle_bg"
             android:elevation="4dp"
             app:layout_constraintEnd_toEndOf="parent"
