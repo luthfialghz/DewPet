@@ -1,0 +1,12 @@
+{
+    "type": "service_account",
+    "project_id": "dewpetproject",
+    "private_key_id": "fbd9e9c1149e2e6675e0938f2930c56d1e8ed486",
+    "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCtSmzeT5ZaRoy9\n9fFN7xtbBEE1mbxgWP8mcFej5+VS9LocbtkWBkBQY1aaAx/CK3GZ0FM1LN3NUiNt\nx0mic8Thmp+foboX/jc20mv1Lkbpq26lDDFlfvw1tSg9de9qVbeynBnH0pdBKs3S\nKk7AWQqY97z5xgK0+kOko9qYoM+CC7W+gsZlQCmluISJNyk9TwsacnkJRYJ64Zez\nvTuzyhALNFxe12GNXJFG9BSd/tgmFju50wP+jK5AZDPNUo0tfAX3EPAVoA258Pbb\nfFPCCkWkCoaSj/9rjG93Du+wVzPZZmuj1CxPEzzMmtnTfrvHGUNbYoEcRwQI7zak\nRiiChqhRAgMBAAECggEAALK9rhvZNINbCNCuekWFFNz3P2gYVWAoMwWdoh2YzKpg\nwyUe+ASxbfpgfHMmcHDlXqseC5j4SrNSvqo11pMdZJKkv+RLUCfEq70nak/eln82\nYqLbG22jYtdYS1P9QzzOnyvGZbSoWFtC9gk00z7MJ0zZkSC7nQ8rhkSvaIMFza5+\nlhC0i8/6ZJrnXYCyjnU3Izodlvu9liucu8CRKVa9o3vXC2xEHmCTUVXlktc94nQ2\n2fDZuWraGenc4sg18M087DWkmQ3gsL+bHo3D11dTuQ9GKR8Otx6/P1q+6o8PrD9J\nZyhzVkqp8EbKJoj0QKivFt/ZUL/Ym++b6PM9lfaxAQKBgQDdqTkV6RJ7Q4O/EKd8\np5SFMfKhc19D4SIn2hpGpmbFtbKn9kIXdC6avsrndElkFbFlrxCZoVfUx5SoUx3y\n+3mpJYC2I8P5u4GIZPzCXiAhCWlWCM+qe1LqQ5EKaUlmt7g3TZyDbZ3PeI18+Tou\n+AP+vs3IdHcldIKdKrXesVih4QKBgQDIIua/Ocxszu66Mm14FOZF7HR+WaHT08dJ\nQXVCYTxsv6/V+mfzyEEOXuk5X9s06T/A1Qa2XwSEtQILlEnE5RWkgRXvDH2VrQih\nvrrc2p9EtQY780S33rPb0YaS886dDt5Ra9mR3OEx0PMKq2pMAzpaUJboOhpH0caI\n4dqHBTW0cQKBgH9gyJJDvsAg+yuoCWeD8cBdBJ4s65jZXkRifGkPJM4G7STCShaq\nSEHa1EUPuUEPikLxyGtQoWWAT3gvU22Xf8Fo8L86bFstmnFj/zA+4N27R9IN/DBu\n8CX5L/c4q9qgRvdY3VFVg7N/BmfD3OCy27DfuuevrexTON/SdHMFnPZhAoGAGAfA\nxwMsnX/3QBof9MQlpg2vKyCeAq4yBoS6jJ7aP4CAn2OyqZ3I2e3heQceber3wbKS\nXMFp7HlDZpqGhQKwp5DsTkikp50gJTOegjgp2XkW54ndHWq7E9DDpM9rZoZLgWE+\nvXnU/ENHe2d7mubkUcXNaNLZJvh0KylbMM0aVrECgYBMU5aOFkwcq9NCqnQegGOY\n17SLx8P+SlfiMwt5CH3hgiFgGJbEY8W+MkWHTfgTzPQKWAkKlsXZvgLE9tqUj+AP\nuIshVcyir99HrHd71YhK8sICx3RZVdDrz84hEyKJa/rjyxZjU4P023J6pz6wJAll\nWrV1KqsKAph+QYfqSJYQuw==\n-----END PRIVATE KEY-----\n",
+    "client_email": "translate-quickstart@dewpetproject.iam.gserviceaccount.com",
+    "client_id": "105701936481072136894",
+    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+    "token_uri": "https://oauth2.googleapis.com/token",
+    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+    "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/translate-quickstart%40dewpetproject.iam.gserviceaccount.com"
+  }
