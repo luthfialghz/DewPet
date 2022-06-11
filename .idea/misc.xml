@@ -52,16 +52,19 @@
         <entry key="..\:/Users/luthf/Desktop/Capstone-Project---DewPet-Bangkit-2022-android/app/src/main/res/layout/activity_settings.xml" value="0.33" />
         <entry key="..\:/Users/luthf/Desktop/Capstone-Project---DewPet-Bangkit-2022-android/app/src/main/res/layout/activity_splash_screen.xml" value="0.1" />
         <entry key="..\:/Users/luthf/Desktop/Capstone-Project---DewPet-Bangkit-2022-android/app/src/main/res/layout/activity_status_detail.xml" value="0.25" />
+        <entry key="..\:/Users/luthf/Desktop/Capstone-Project---DewPet-Bangkit-2022-android/app/src/main/res/layout/fragment_alert_appointment.xml" value="0.25555555555555554" />
         <entry key="..\:/Users/luthf/Desktop/Capstone-Project---DewPet-Bangkit-2022-android/app/src/main/res/layout/fragment_detail_status.xml" value="0.33" />
         <entry key="..\:/Users/luthf/Desktop/Capstone-Project---DewPet-Bangkit-2022-android/app/src/main/res/layout/fragment_result_diagnose.xml" value="0.25" />
         <entry key="..\:/Users/luthf/Desktop/Capstone-Project---DewPet-Bangkit-2022-android/app/src/main/res/layout/item_loading.xml" value="0.34646739130434784" />
         <entry key="..\:/Users/luthf/Desktop/Capstone-Project---DewPet-Bangkit-2022-android/app/src/main/res/layout/list_item_location.xml" value="0.22" />
         <entry key="..\:/Users/luthf/Desktop/Capstone-Project---DewPet-Bangkit-2022-android/app/src/main/res/layout/row_article.xml" value="0.34646739130434784" />
         <entry key="..\:/Users/luthf/Desktop/Capstone-Project---DewPet-Bangkit-2022-android/app/src/main/res/layout/row_indicator.xml" value="0.33" />
-        <entry key="..\:/Users/luthf/Desktop/Capstone-Project---DewPet-Bangkit-2022-android/app/src/main/res/layout/row_status.xml" value="0.67" />
-        <entry key="..\:/Users/luthf/Desktop/Capstone-Project---DewPet-Bangkit-2022-android/app/src/main/res/layout/row_status_admin.xml" value="0.5" />
+        <entry key="..\:/Users/luthf/Desktop/Capstone-Project---DewPet-Bangkit-2022-android/app/src/main/res/layout/row_status.xml" value="0.25" />
+        <entry key="..\:/Users/luthf/Desktop/Capstone-Project---DewPet-Bangkit-2022-android/app/src/main/res/layout/row_status_admin.xml" value="0.22" />
         <entry key="..\:/Users/luthf/Desktop/Capstone-Project---DewPet-Bangkit-2022-android/app/src/main/res/layout/row_vet.xml" value="0.3026315789473684" />
         <entry key="..\:/Users/luthf/Desktop/Capstone-Project---DewPet-Bangkit-2022-android/app/src/main/res/layout/toolbar.xml" value="0.5" />
+        <entry key="..\:/Users/luthf/Desktop/Capstone-Project---DewPet-Bangkit-2022-android/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.148" />
+        <entry key="..\:/Users/luthf/Desktop/Capstone-Project---DewPet-Bangkit-2022-android/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.148" />
         <entry key="..\:/Users/luthf/Desktop/CapstoneProject-DewPet-main/app/src/main/res/drawable/button_primary.xml" value="0.1935" />
         <entry key="..\:/Users/luthf/Desktop/CapstoneProject-DewPet-main/app/src/main/res/drawable/button_secondary.xml" value="0.3105" />
         <entry key="..\:/Users/luthf/Desktop/CapstoneProject-DewPet-main/app/src/main/res/drawable/ic_logo___splash_screen.xml" value="0.3105" />
