@@ -23,7 +23,7 @@ This API is intended for the purposes of our capstone project at Bangkit Academy
 | /appointment  | Add Appointment | - | - | - |
 | /jadwalbook  | Check Appointment | - | - | - |
 | /edited/`<int:id>`  | - | - | Update appointment | - |
-| /clientlist  | List Client | - | - | - |
+| /clientlist  | - | List Client | - | - |
 | /hapus/`<int:id>`  | - | - | - | Delete appointment |
 | /articles  | - | List Articles | - | - |
 
@@ -1047,14 +1047,8 @@ This API is intended for the purposes of our capstone project at Bangkit Academy
 ```
 
 ### Check Client Appointment
-* Method : POST
+* Method : GET
 * URL : `/clientlist`    
-* Request body :
-```json
-{
-        "vet_id" : "12334"
-}
-```
 * Response body :
 ```json
 {
@@ -1063,10 +1057,20 @@ This API is intended for the purposes of our capstone project at Bangkit Academy
         {
             "id": 28,
             "client_email": "dannydarmawan359@gmail.com",
+            "namaL": "drh. shin ryujin M.Pd",
             "modified_at": "2022-06-10T06:27:38.000Z",
             "start_at": "2022-06-13T15:00:00.000Z",
             "approved": "yes",
             "message": "kucing saya matanya kering"
+        },
+        {
+            "id": 29,
+            "client_email": "luthfialghz@gmail.com",
+            "namaL": "drh. shin ryujin M.Pd",
+            "modified_at": "2022-06-10T12:16:34.000Z",
+            "start_at": "2022-05-10T07:15:00.000Z",
+            "approved": "waiting",
+            "message": "gasgsaga"
         }
     ]
 }
