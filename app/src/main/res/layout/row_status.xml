@@ -11,22 +11,30 @@
 
     <TextView
         android:id="@+id/tv_vet_name"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/poppins_bold"
         android:text="Nama Dokter"
+        android:textAlignment="center"
+        android:textColor="@color/tiffanyBlue_100"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tv_vet_location"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
+        android:fontFamily="@font/poppins_bold"
         android:text="Location"
+        android:textAlignment="center"
+        android:textColor="@color/pearl_aqua"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_vet_name" />
@@ -37,7 +45,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
+        android:fontFamily="@font/poppins_regular"
         android:text="Status :"
+        android:textColor="@color/black_100"
+        android:textSize="12sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_date_title" />
 
@@ -47,7 +58,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
+        android:fontFamily="@font/poppins_regular"
         android:text="Keluhan :"
+        android:textColor="@color/black_100"
+        android:textSize="12sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_vet_status_title" />
 
@@ -57,17 +71,26 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:fontFamily="@font/poppins_regular"
         android:text="Status"
+        android:textColor="@color/black_100"
+        android:textSize="12sp"
         app:layout_constraintStart_toEndOf="@+id/tv_vet_status_title"
         app:layout_constraintTop_toBottomOf="@+id/tv_date_title" />
 
     <TextView
         android:id="@+id/tv_vet_complaint"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/poppins_regular"
+        android:maxLines="2"
         android:text="Keluhan"
+        android:textColor="@color/black_100"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/tv_vet_complaint_title"
         app:layout_constraintTop_toBottomOf="@+id/tv_vet_status_title" />
 
@@ -77,20 +100,21 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/pearl_aqua"
         android:text="Batalkan"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_vet_complaint_title" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
         android:id="@+id/btn_edit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
         android:layout_marginBottom="16dp"
         android:text="Ubah"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btn_cancel"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_vet_complaint_title" />
 
     <TextView
@@ -99,7 +123,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
+        android:fontFamily="@font/poppins_regular"
         android:text="Jadwal :"
+        android:textColor="@color/black_100"
+        android:textSize="12sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_vet_location" />
 
@@ -109,7 +136,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:fontFamily="@font/poppins_regular"
         android:text="Jadwal"
+        android:textColor="@color/black_100"
+        android:textSize="12sp"
         app:layout_constraintStart_toEndOf="@+id/tv_date_title"
         app:layout_constraintTop_toBottomOf="@+id/tv_vet_location" />
 </androidx.constraintlayout.widget.ConstraintLayout>

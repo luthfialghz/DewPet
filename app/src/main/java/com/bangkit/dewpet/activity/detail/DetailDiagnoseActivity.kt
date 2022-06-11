@@ -7,6 +7,7 @@ import com.bangkit.dewpet.R
 import com.bangkit.dewpet.activity.MainActivity
 import com.bangkit.dewpet.databinding.ActivityDetailDiagnoseBinding
 import com.bangkit.dewpet.features.DewCareActivity
+import com.bangkit.dewpet.features.DewTecActivity
 import com.bangkit.dewpet.features.DewVetActivity
 
 class DetailDiagnoseActivity : AppCompatActivity() {
@@ -23,8 +24,8 @@ class DetailDiagnoseActivity : AppCompatActivity() {
         binding.tvDiseaseEng.text = intent.getStringExtra("EXTRA_DISEASE_EN")
         binding.tvDiseaseEtc.text = intent.getStringExtra("EXTRA_ETC")
 
-        binding.btnBackToMenu.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
+        binding.btnBack.setOnClickListener {
+            val intent = Intent(this, DewTecActivity::class.java)
             startActivity(intent)
             finish()
         }

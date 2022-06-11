@@ -37,6 +37,7 @@ class ListStatusAdminAdapter(val results : ArrayList<AttachAppointmentStatusResp
         val result = results[position]
         holder.view.tv_vet_name.text = result.namaL
         holder.view.tv_vet_status.text = result.approved
+        holder.view.tv_complaint_admin.text = result.message
         val dateInString = result.startAt.toString()
         val inputFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'", Locale.ENGLISH)
         val outputFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm", Locale.ENGLISH)

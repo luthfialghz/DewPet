@@ -24,6 +24,7 @@ class ListVeterinaryAdapter(val results : ArrayList<VetResponse.JadwalItem>, val
         holder.view.tv_name_vet.text = result.namaL
         holder.view.tv_location.text = result.location
         holder.view.tv_day.text = "Buka Hari    : ${result.day}"
+
         holder.view.tv_open.text = "Jam Buka    : ${result.open}"
         holder.view.tv_close.text = "Jam Tutup  : ${result.close}"
         holder.view.btn_call_vet.setOnClickListener {

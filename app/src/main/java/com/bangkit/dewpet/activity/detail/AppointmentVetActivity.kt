@@ -23,6 +23,7 @@ import com.bangkit.dewpet.data.response.ArticleResponse
 import com.bangkit.dewpet.data.response.UserResponse
 import com.bangkit.dewpet.data.response.VetAppointmentResponse
 import com.bangkit.dewpet.databinding.ActivityAppointmentVetBinding
+import com.bangkit.dewpet.features.DewVetActivity
 import kotlinx.android.synthetic.main.activity_appointment_vet.*
 import retrofit2.Call
 import retrofit2.Callback
@@ -44,6 +45,7 @@ class AppointmentVetActivity : AppCompatActivity(), DatePickerDialog.OnDateSetLi
         super.onCreate(savedInstanceState)
         binding = ActivityAppointmentVetBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        supportActionBar?.hide()
         sharedPref = getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE)
         userPref = UserPref(this)
 
@@ -55,6 +57,11 @@ class AppointmentVetActivity : AppCompatActivity(), DatePickerDialog.OnDateSetLi
 
         pickDate()
         initializeVet()
+
+        binding.ivBack.setOnClickListener {
+            val intent = Intent(this, DewVetActivity::class.java)
+            startActivity(intent)
+        }
 
         binding.btnSubmit.setOnClickListener {
             getData(request)

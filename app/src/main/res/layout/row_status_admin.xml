@@ -11,11 +11,16 @@
 
     <TextView
         android:id="@+id/tv_vet_name"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/poppins_bold"
         android:text="Nama Dokter"
+        android:textAlignment="center"
+        android:textColor="@color/tiffanyBlue_100"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -26,6 +31,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:text="Status :"
+        android:textSize="12sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_date_title" />
 
@@ -36,6 +42,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:text="Keluhan :"
+        android:textSize="12sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_vet_status_title" />
 
@@ -46,18 +53,9 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="Status"
+        android:textSize="12sp"
         app:layout_constraintStart_toEndOf="@+id/tv_vet_status_title"
         app:layout_constraintTop_toBottomOf="@+id/tv_vet_date" />
-
-    <TextView
-        android:id="@+id/tv_vet_complaint"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="Keluhan"
-        app:layout_constraintStart_toEndOf="@+id/tv_vet_complaint_title"
-        app:layout_constraintTop_toBottomOf="@+id/tv_vet_status_title" />
 
     <TextView
         android:id="@+id/tv_date_title"
@@ -66,6 +64,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:text="Jadwal :"
+        android:textSize="12sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_vet_name" />
 
@@ -76,6 +75,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="Jadwal"
+        android:textSize="12sp"
         app:layout_constraintStart_toEndOf="@+id/tv_date_title"
         app:layout_constraintTop_toBottomOf="@+id/tv_vet_name" />
 
@@ -87,17 +87,31 @@
         android:layout_marginBottom="16dp"
         android:text="Tolak"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_vet_complaint" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
         android:id="@+id/btn_accept"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
         android:layout_marginBottom="16dp"
         android:text="Terima"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btn_decline"
-        app:layout_constraintTop_toBottomOf="@+id/tv_vet_complaint" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_vet_complaint_title" />
+
+    <TextView
+        android:id="@+id/tv_complaint_admin"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:maxLines="2"
+        android:text="Keluhan"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_vet_complaint_title"
+        app:layout_constraintTop_toBottomOf="@+id/tv_vet_status" />
 </androidx.constraintlayout.widget.ConstraintLayout>
