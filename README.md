@@ -1,13 +1,13 @@
-# C22-PS253 - Capstone Project (DewPet)
+# Machine Learning
 
-## Hello Everyone! :wave:
+## Pet Disease Classification
 
-We are from team C22-PS253, and this is our project repository.
+We classify diseases in pets, namely dogs, cats, and rabbits based on their symptoms. With datasets created manually from data collection.
 
-Our project combines technology from path machine learning, android, and cloud computing to makes an application that makes it easy for pet owners in terms of care and understanding
+This project was created using deep learning technologies and libraries as follows:
+- Tensorflow
+- Pandas
+- Numpy
+- Sklearn
+- Matplotlib
 
-## Branch
-- [Machine Learning](https://github.com/luthfialghz/Capstone-Project---DewPet-Bangkit-2022/tree/machine_learning)
-- [Android](https://github.com/luthfialghz/Capstone-Project---DewPet-Bangkit-2022/tree/android)
-- [Cloud Webservice](https://github.com/luthfialghz/Capstone-Project---DewPet-Bangkit-2022/tree/web_service)
-- [Cloud Functions]
