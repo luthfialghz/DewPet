@@ -12,5 +12,6 @@
     <color name="cadetBlue_90">#5AA7A7</color>
     <color name="tiffanyBlue_100">#00ADB5</color>
     <color name="pearl_aqua">#96D7C6</color>
+    <color name="black_100">#1D232E</color>
     <!--Gradient Color-->
 </resources>

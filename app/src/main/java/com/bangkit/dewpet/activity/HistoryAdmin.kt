@@ -39,6 +39,12 @@ class HistoryAdmin : AppCompatActivity() {
         binding.rvStatusAppointment.layoutManager = LinearLayoutManager(this)
         binding.rvStatusAppointment.setHasFixedSize(true)
 
+        binding.ivBackButton.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
+
         getAppointment()
         setupRecyclerView()
         startProg()

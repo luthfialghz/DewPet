@@ -63,7 +63,7 @@
                 android:layout_marginEnd="16dp"
                 android:layout_marginBottom="6dp"
                 android:fontFamily="@font/poppins_bold"
-                android:maxLength="15"
+                android:maxLength="25"
                 android:text="@string/input_name"
                 android:textColor="@color/white"
                 android:textSize="16sp"

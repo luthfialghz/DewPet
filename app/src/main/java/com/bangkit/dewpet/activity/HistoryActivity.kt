@@ -49,6 +49,11 @@ class HistoryActivity() : AppCompatActivity() {
         sharedPref = getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE)
         binding.rvStatusAppointment.layoutManager = LinearLayoutManager(this)
         binding.rvStatusAppointment.setHasFixedSize(true)
+        binding.ivBackButton.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
 
         userPref = UserPref(this)
         var token : String? = sharedPref.getString(KEY_TOKEN, null)

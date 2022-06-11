@@ -4,13 +4,13 @@
     <string name="news_org_key">f055bc71df734b84b83d42ec2fb0a63c</string>
 
     <!--On Boarding Page-->
-    <string name="title_menu_1">Deteksi Penyakit Peliharaanmu Sejak Dini</string>
-    <string name="title_menu_2">Mencari Lokasi Pet Care dan Pet Shop Terdekat</string>
-    <string name="title_menu_3">Buat Janji dengan Dokter</string>
+    <string name="title_menu_1">DewTec</string>
+    <string name="title_menu_2">DewAppont</string>
+    <string name="title_menu_3">DewCare</string>
 
-    <string name="desc_menu_1">Kami menyediakan beragam kebutuhan hewan peliharaan Anda. Dari makanan hingga perlengkapan pendukung.</string>
-    <string name="desc_menu_2">Kami menyediakan beragam kebutuhan hewan peliharaan Anda. Dari makanan hingga perlengkapan pendukung.</string>
-    <string name="desc_menu_3">Kami menyediakan beragam kebutuhan hewan peliharaan Anda. Dari makanan hingga perlengkapan pendukung.</string>
+    <string name="desc_menu_1">Deteksi penyakit yang di derita peliharaanmu berdasarkan gejala yang dialami menggunakan AI.</string>
+    <string name="desc_menu_2">Buat janji temu dengan dokter, deskripsikan keluhan hewan peliharaanmu.</string>
+    <string name="desc_menu_3">Menampilkan lokasi Pet Care dan Pet Shop sekitar anda.</string>
 
     <string name="register_now">Daftar Sekarang</string>
     <string name="register">Daftar</string>

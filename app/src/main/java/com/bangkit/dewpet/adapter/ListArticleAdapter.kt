@@ -24,13 +24,13 @@ class ListArticleAdapter(val results : ArrayList<ArticleResponse.ArticlesItem>, 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val result = results[position]
         holder.view.tvTitle.text = result.title
-        holder.view.tvSource.text = result.author
+        holder.view.tvSource.text = "Penulis : ${result.author}"
         val dateInString = result.publishedAt
         val inputFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss'Z'", Locale.ENGLISH)
         val outputFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm", Locale.ENGLISH)
         val date = LocalDateTime.parse(dateInString, inputFormatter)
         val formattedDate = outputFormatter.format(date)
-        holder.view.tvPublishedAt.text = formattedDate
+        holder.view.tvPublishedAt.text = "Diposting pada : ${formattedDate}"
         holder.view.tvDescription.text = result.description
         Glide.with(holder.view)
             .load(result.urlToImage)
