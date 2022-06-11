@@ -60,9 +60,9 @@ This API is intended for the purposes of our capstone project at Bangkit Academy
 * Request body :
 ```json 
 {
-    "email": "shintest@gmail.com",
-    "password": "a6123",
-    "namaL": "drh. shin ryujin M.PD"
+    "email": "dannydarmawan359@gmail.com",
+    "password": "123456",
+    "namaL": "Danny Darmawan Putra"
 }
 ```
 * Response body:
