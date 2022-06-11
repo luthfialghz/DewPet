@@ -89,28 +89,34 @@ class DewTecActivity : AppCompatActivity() {
         val testing = listIndicatorAdapter.getData()
         testing.observe(this){
             request.penyakit = it
+            val count = it.size
+            Log.e("Count", count.toString())
             binding.tvIndicatorTotal.text = it.toString()
             Log.e("Data", it.toString())
             binding.btnDiagnose.setOnClickListener {
                 startProg()
-                if (rb_cat.isChecked) {
-                    request.hewan = rb_cat.text.toString()
-                    Log.e("Penyakit", request.penyakit.toString())
-                    Log.e("Hewan", request.hewan.toString())
-                    getDiagnose()
-                } else if (rb_dog.isChecked){
-                    request.hewan = rb_dog.text.toString()
-                    Log.e("Penyakit", request.penyakit.toString())
-                    Log.e("Hewan", request.hewan.toString())
-                    getDiagnose()
-                } else if (rb_rabbit.isChecked) {
-                    request.hewan = rb_rabbit.text.toString()
-                    Log.e("Penyakit", request.penyakit.toString())
-                    Log.e("Hewan", request.hewan.toString())
-                    getDiagnose()
+                if (count < 5) {
+                    Toast.makeText(this, "Pilih lebih dari lima gejala", Toast.LENGTH_SHORT).show()
                 } else {
-                    Toast.makeText(this,"Masukkan jenis hewan terlebih dahulu", Toast.LENGTH_LONG).show()
-                    stopProg()
+                    if (rb_cat.isChecked) {
+                        request.hewan = rb_cat.text.toString()
+                        Log.e("Penyakit", request.penyakit.toString())
+                        Log.e("Hewan", request.hewan.toString())
+                        getDiagnose()
+                    } else if (rb_dog.isChecked){
+                        request.hewan = rb_dog.text.toString()
+                        Log.e("Penyakit", request.penyakit.toString())
+                        Log.e("Hewan", request.hewan.toString())
+                        getDiagnose()
+                    } else if (rb_rabbit.isChecked) {
+                        request.hewan = rb_rabbit.text.toString()
+                        Log.e("Penyakit", request.penyakit.toString())
+                        Log.e("Hewan", request.hewan.toString())
+                        getDiagnose()
+                    } else {
+                        Toast.makeText(this,"Masukkan jenis hewan terlebih dahulu", Toast.LENGTH_LONG).show()
+                        stopProg()
+                    }
                 }
             }
         }
