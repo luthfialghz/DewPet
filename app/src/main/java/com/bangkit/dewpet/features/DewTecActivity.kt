@@ -95,8 +95,8 @@ class DewTecActivity : AppCompatActivity() {
             Log.e("Data", it.toString())
             binding.btnDiagnose.setOnClickListener {
                 startProg()
-                if (count < 5) {
-                    Toast.makeText(this, "Pilih lebih dari lima gejala", Toast.LENGTH_SHORT).show()
+                if (count < 1) {
+                    Toast.makeText(this, "Pilih lebih dari satu gejala", Toast.LENGTH_SHORT).show()
                 } else {
                     if (rb_cat.isChecked) {
                         request.hewan = rb_cat.text.toString()

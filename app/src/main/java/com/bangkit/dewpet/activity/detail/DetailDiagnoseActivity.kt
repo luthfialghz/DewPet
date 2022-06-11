@@ -18,6 +18,7 @@ class DetailDiagnoseActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityDetailDiagnoseBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        supportActionBar?.hide()
 
         binding.tvDisease.text = intent.getStringExtra("EXTRA_DISEASE")
         binding.tvDiseaseCategory.text = intent.getStringExtra("EXTRA_CATEGORY")
