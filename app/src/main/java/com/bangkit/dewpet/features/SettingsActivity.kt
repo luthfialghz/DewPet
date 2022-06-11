@@ -16,8 +16,6 @@ class SettingsActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySettingsBinding
 
     val PREF_NAME = "AUTH_PREF"
-    val KEY_TOKEN = "key.email"
-    val KEY_NAME = "key.password"
 
     lateinit var sharedPref: SharedPreferences
 
@@ -41,6 +39,6 @@ class SettingsActivity : AppCompatActivity() {
         editor.apply()
         val intent = Intent(this, OnboardingActivity::class.java)
         startActivity(intent)
-        finish()
+        finishAffinity()
     }
 }

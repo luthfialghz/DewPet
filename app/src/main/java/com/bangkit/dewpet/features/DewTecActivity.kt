@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.Toast
+import androidx.appcompat.widget.SearchView
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bangkit.dewpet.activity.MainActivity
 import com.bangkit.dewpet.activity.detail.DetailDiagnoseActivity
@@ -131,11 +132,19 @@ class DewTecActivity : AppCompatActivity() {
                     if (category == "Minor") {
                         val etc = "Dapat dirawat sendiri dengan obat obatan yang tersedia di PetCare"
                         val mCategory = "Penyakit Kategori Ringan"
-                        intent(disease, mCategory, diseaseEng, etc)
+                        if (disease == "null (Bahasa Indonesia)"){
+                            Toast.makeText(this@DewTecActivity, "Kombinasi gejala kurang sesuai", Toast.LENGTH_LONG).show()
+                        } else {
+                            intent(disease, mCategory, diseaseEng, etc)
+                        }
                     } else {
                         val etc = "Segera Hubungi vet atau pergi ke PetCare"
                         val mCategory= "Penyakit Kategori Berat"
-                        intent(disease, mCategory, diseaseEng, etc)
+                        if (disease == "null (Bahasa Indonesia)"){
+                            Toast.makeText(this@DewTecActivity, "Kombinasi gejala kurang sesuai", Toast.LENGTH_LONG).show()
+                        } else {
+                            intent(disease, mCategory, diseaseEng, etc)
+                        }
                     }
                 }
             }

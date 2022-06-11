@@ -7,21 +7,27 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.Filter
+import android.widget.Filterable
 import androidx.core.content.ContextCompat.startActivity
 import androidx.lifecycle.MutableLiveData
 import androidx.recyclerview.widget.RecyclerView
 import com.bangkit.dewpet.R
 import com.bangkit.dewpet.data.response.ArticleResponse
 import com.bangkit.dewpet.data.response.IndicatorResponse
+import com.bangkit.dewpet.databinding.RowIndicatorBinding
 import com.bangkit.dewpet.features.DewTecActivity
 import kotlinx.android.synthetic.main.activity_dew_tec.view.*
 import kotlinx.android.synthetic.main.row_indicator.view.*
+import java.util.*
+import kotlin.collections.ArrayList
 
 class ListIndicatorAdapter(val results : ArrayList<IndicatorResponse.GejalaItem>, val listener: ListIndicatorAdapter.onAdapterListener):
     RecyclerView.Adapter<ListIndicatorAdapter.ViewHolder>() {
 
     var mutableListIndicator = ArrayList<String>()
     var indicatorGejala = MutableLiveData<ArrayList<String>>()
+
 
 
     class ViewHolder (val view: View) : RecyclerView.ViewHolder(view)

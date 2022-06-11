@@ -31,11 +31,12 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/cl_data_user"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="34dp"
             android:layout_marginStart="16dp"
             android:background="@drawable/layout_bg"
             app:layout_constraintBottom_toBottomOf="@+id/iv_profile_user"
+            app:layout_constraintEnd_toEndOf="@+id/cl_features"
             app:layout_constraintStart_toEndOf="@+id/iv_profile_user"
             app:layout_constraintTop_toTopOf="@+id/iv_profile_user">
 
@@ -56,12 +57,13 @@
 
             <TextView
                 android:id="@+id/tv_name_user"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="6dp"
                 android:layout_marginEnd="16dp"
                 android:layout_marginBottom="6dp"
                 android:fontFamily="@font/poppins_bold"
+                android:maxLength="15"
                 android:text="@string/input_name"
                 android:textColor="@color/white"
                 android:textSize="16sp"

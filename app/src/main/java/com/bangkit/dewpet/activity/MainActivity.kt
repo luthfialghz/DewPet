@@ -64,7 +64,6 @@ class MainActivity : AppCompatActivity() {
         binding.ivSettings.setOnClickListener {
             val intent = Intent(this, SettingsActivity::class.java)
             startActivity(intent)
-            finish()
         }
 
         binding.ivDewCare.setOnClickListener {
@@ -135,6 +134,7 @@ class MainActivity : AppCompatActivity() {
             override fun onResponse(call: Call<UserResponse>, response: Response<UserResponse>) {
                 val data = response.body()
                 val role = data?.role
+                Log.e("role", role.toString())
                 if (role == "user") {
                     intentByUser()
                 } else {
