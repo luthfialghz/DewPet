@@ -114,6 +114,8 @@
     <string name="comingsoon">Akan segera hadir</string>
     <string name="nav_store_kembali">Kembali</string>
     <string name="nav_riwayat">Riwayat</string>
+
+    <!--Settings-->
     <string name="settings_info_akun_anda">INFO AKUN ANDA</string>
     <string name="settings_nama">Nama :</string>
     <string name="settings_nama_pengguna_value">Nama Pengguna</string>
