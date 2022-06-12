@@ -6,7 +6,8 @@ We created a mobile application to detect pet diseases early using AI (Augmented
 
 The main function of the mobile application that we created is to assist the user/pet owner in detecting the disease suffered by the pet early and knowing the category of the disease. We are also developing features for buying and selling pet needs.
 
-
+## Download Application (Apk)
+https://drive.google.com/file/d/1WCy5_09dqf38fqF9MsxobwMb5CuKAW-5/view?usp=sharing
 
 ## Technologies
 
