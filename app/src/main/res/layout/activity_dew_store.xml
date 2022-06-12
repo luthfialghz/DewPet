@@ -13,7 +13,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="28dp"
         android:fontFamily="@font/poppins_bold"
-        android:text="Kembali"
+        android:text="@string/nav_store_kembali"
         android:textColor="@color/tiffanyBlue_100"
         android:textSize="15sp"
         app:layout_constraintStart_toEndOf="@+id/tv_back_store"

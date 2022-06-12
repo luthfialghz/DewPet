@@ -79,18 +79,6 @@
     <string name="list_day">Day</string>
     <string name="list_close">Close</string>
     <string name="list_open">Open</string>
-
-    <!--DewTec-->
-    <string name="input_indication">Masukkan Gejala</string>
-    <string name="detect_result">HASIL DIAGNOSA</string>
-    <string name="detect_ill">Penyakit</string>
-    <string name="detect_category">Kategori</string>
-    <string name="detect_description">Keterangan</string>
-    <string name="detect_suggestion_act">Saran Tindakan :</string>
-    <string name="detect_need_help">Butuh Bantuan?</string>
-
-    <!--DewStore-->
-    <string name="comingsoon">Akan segera hadir</string>
     <string name="admin_nama_dokter">Nama Dokter</string>
     <string name="admin_status">Status :</string>
     <string name="admin_keluhan">Keluhan :</string>
@@ -100,6 +88,42 @@
     <string name="admin_tolak">Tolak</string>
     <string name="admin_terima">Terima</string>
     <string name="admin_keluhan_value">Keluhan</string>
+    <string name="nav_appointment">Appointment</string>
+
+
+    <!--DewTec-->
+    <string name="input_indication">Masukkan Gejala</string>
+    <string name="detect_result">HASIL DIAGNOSA</string>
+    <string name="detect_ill">Penyakit</string>
+    <string name="detect_category">Kategori</string>
+    <string name="detect_description">Keterangan</string>
+    <string name="detect_suggestion_act">Saran Tindakan :</string>
+    <string name="detect_need_help">Butuh Bantuan?</string>
+    <string name="detect_pilih_hewan">Pilih Hewan :</string>
+    <string name="nav_dewtec">DewTec</string>
+    <string name="detect_info_choose_symptoms">Pilih beberapa gejala dibawah ini</string>
+    <string name="detect_diagnosa">Diagnosa</string>
+    <string name="detect_choose_symptoms">Pilih Gejala :</string>
+    <string name="detect_hint_symptoms">Masukkan gejala terlebih dahulu</string>
+    <string name="detect_kucing">kucing</string>
+    <string name="detect_anjing">anjing</string>
+    <string name="detect_kelinci">kelinci</string>
+
+
+    <!--DewStore-->
+    <string name="comingsoon">Akan segera hadir</string>
+    <string name="nav_store_kembali">Kembali</string>
+    <string name="nav_riwayat">Riwayat</string>
+    <string name="settings_info_akun_anda">INFO AKUN ANDA</string>
+    <string name="settings_nama">Nama :</string>
+    <string name="settings_nama_pengguna_value">Nama Pengguna</string>
+    <string name="settings_email">Email :</string>
+    <string name="settings_email_pengguna_value">Email Pengguna</string>
+    <string name="article_source">SOURCE</string>
+    <string name="article_title">TITLE</string>
+    <string name="article_description">DESCRIPTION</string>
+    <string name="article_publisher">PUBLISHED AT</string>
+    <string name="indicator_button">Button</string>
 
 
 </resources>

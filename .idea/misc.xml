@@ -92,6 +92,30 @@
         <entry key="..\:/dev/android-project/Capstone-Project---DewPet-Bangkit-2022-android/app/src/main/res/layout/row_status.xml" value="0.264" />
         <entry key="..\:/dev/android-project/Capstone-Project---DewPet-Bangkit-2022-android/app/src/main/res/layout/row_status_admin.xml" value="0.12" />
         <entry key="..\:/dev/android-project/Capstone-Project---DewPet-Bangkit-2022-android/app/src/main/res/layout/row_vet.xml" value="0.6" />
+        <entry key="..\:/dev/android-project/New folder/Capstone-Project---DewPet-Bangkit-2022/app/src/main/res/drawable/btn_call_vet.xml" value="0.1675" />
+        <entry key="..\:/dev/android-project/New folder/Capstone-Project---DewPet-Bangkit-2022/app/src/main/res/drawable/button_rectangle.xml" value="0.1675" />
+        <entry key="..\:/dev/android-project/New folder/Capstone-Project---DewPet-Bangkit-2022/app/src/main/res/drawable/button_secondary.xml" value="0.1675" />
+        <entry key="..\:/dev/android-project/New folder/Capstone-Project---DewPet-Bangkit-2022/app/src/main/res/drawable/cat_with_ball.xml" value="0.1675" />
+        <entry key="..\:/dev/android-project/New folder/Capstone-Project---DewPet-Bangkit-2022/app/src/main/res/drawable/component.xml" value="0.1675" />
+        <entry key="..\:/dev/android-project/New folder/Capstone-Project---DewPet-Bangkit-2022/app/src/main/res/drawable/dew_appoint.xml" value="0.1675" />
+        <entry key="..\:/dev/android-project/New folder/Capstone-Project---DewPet-Bangkit-2022/app/src/main/res/layout/activity_appointment_vet.xml" value="0.25" />
+        <entry key="..\:/dev/android-project/New folder/Capstone-Project---DewPet-Bangkit-2022/app/src/main/res/layout/activity_detail_diagnose.xml" value="0.25" />
+        <entry key="..\:/dev/android-project/New folder/Capstone-Project---DewPet-Bangkit-2022/app/src/main/res/layout/activity_dew_care.xml" value="0.25" />
+        <entry key="..\:/dev/android-project/New folder/Capstone-Project---DewPet-Bangkit-2022/app/src/main/res/layout/activity_dew_store.xml" value="0.1" />
+        <entry key="..\:/dev/android-project/New folder/Capstone-Project---DewPet-Bangkit-2022/app/src/main/res/layout/activity_dew_tec.xml" value="0.25" />
+        <entry key="..\:/dev/android-project/New folder/Capstone-Project---DewPet-Bangkit-2022/app/src/main/res/layout/activity_dew_vet.xml" value="0.25" />
+        <entry key="..\:/dev/android-project/New folder/Capstone-Project---DewPet-Bangkit-2022/app/src/main/res/layout/activity_history.xml" value="0.25" />
+        <entry key="..\:/dev/android-project/New folder/Capstone-Project---DewPet-Bangkit-2022/app/src/main/res/layout/activity_history_admin.xml" value="0.25" />
+        <entry key="..\:/dev/android-project/New folder/Capstone-Project---DewPet-Bangkit-2022/app/src/main/res/layout/activity_login.xml" value="0.25" />
+        <entry key="..\:/dev/android-project/New folder/Capstone-Project---DewPet-Bangkit-2022/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/dev/android-project/New folder/Capstone-Project---DewPet-Bangkit-2022/app/src/main/res/layout/activity_onboarding.xml" value="0.14945652173913043" />
+        <entry key="..\:/dev/android-project/New folder/Capstone-Project---DewPet-Bangkit-2022/app/src/main/res/layout/activity_register.xml" value="0.25" />
+        <entry key="..\:/dev/android-project/New folder/Capstone-Project---DewPet-Bangkit-2022/app/src/main/res/layout/activity_settings.xml" value="0.25" />
+        <entry key="..\:/dev/android-project/New folder/Capstone-Project---DewPet-Bangkit-2022/app/src/main/res/layout/activity_splash_screen.xml" value="0.14945652173913043" />
+        <entry key="..\:/dev/android-project/New folder/Capstone-Project---DewPet-Bangkit-2022/app/src/main/res/layout/row_article.xml" value="0.25" />
+        <entry key="..\:/dev/android-project/New folder/Capstone-Project---DewPet-Bangkit-2022/app/src/main/res/layout/row_indicator.xml" value="0.25" />
+        <entry key="..\:/dev/android-project/New folder/Capstone-Project---DewPet-Bangkit-2022/app/src/main/res/layout/row_status.xml" value="0.25" />
+        <entry key="..\:/dev/android-project/New folder/Capstone-Project---DewPet-Bangkit-2022/app/src/main/res/layout/row_status_admin.xml" value="0.25" />
         <entry key="app/src/main/res/drawable/button.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/button_secondary.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/color_gradient.xml" value="0.143" />

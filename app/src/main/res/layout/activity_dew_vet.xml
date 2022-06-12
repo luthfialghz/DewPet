@@ -42,7 +42,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="52dp"
         android:fontFamily="@font/poppins_bold"
-        android:text="Appointment"
+        android:text="@string/nav_appointment"
         android:textColor="@color/tiffanyBlue_100"
         android:textSize="15sp"
         app:layout_constraintStart_toEndOf="@+id/iv_back_button"
