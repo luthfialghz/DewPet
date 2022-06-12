@@ -6,6 +6,12 @@ We created a mobile application to detect pet diseases early using AI (Augmented
 
 The main function of the mobile application that we created is to assist the user/pet owner in detecting the disease suffered by the pet early and knowing the category of the disease. We are also developing features for buying and selling pet needs.
 
+## How it Works
+- Register and Login with an account
+- Go to DewTec then choose animal category and disease symptoms more than one
+- Diagnose and you will get results in the form of disease name, disease category and also advanced suggestions
+- You can take the next step in the form of contacting the doctor and making an appointment or looking at the petshop and petcare around you
+
 ## Download Application (Apk)
 [DewPet.apk](https://drive.google.com/file/d/1b_tw1VYAlt9758lSCRw4Egg2v0OCboBe/view?usp=sharing)
 
