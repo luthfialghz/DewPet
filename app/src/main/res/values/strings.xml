@@ -1,0 +1,129 @@
+<resources>
+    <string name="app_name">DewPet</string>
+    <string name="google_maps_key">AIzaSyBoe1nFXXAHW-ED950tM-pG0f-CFlLncfw</string>
+    <string name="news_org_key">f055bc71df734b84b83d42ec2fb0a63c</string>
+
+    <!--On Boarding Page-->
+    <string name="title_menu_1">DewTec</string>
+    <string name="title_menu_2">DewAppont</string>
+    <string name="title_menu_3">DewCare</string>
+
+    <string name="desc_menu_1">Deteksi penyakit yang di derita peliharaanmu berdasarkan gejala yang dialami menggunakan AI.</string>
+    <string name="desc_menu_2">Buat janji temu dengan dokter, deskripsikan keluhan hewan peliharaanmu.</string>
+    <string name="desc_menu_3">Menampilkan lokasi Pet Care dan Pet Shop sekitar anda.</string>
+
+    <string name="register_now">Daftar Sekarang</string>
+    <string name="register">Daftar</string>
+    <string name="not_have_account">Belum memiliki akun?</string>
+    <string name="login">Masuk</string>
+
+    <!--Register Page-->
+    <string name="input_name">Nama Lengkap</string>
+    <string name="input_email">Alamat Email</string>
+    <string name="input_password">Password</string>
+
+    <string name="create_account">Buat Akun</string>
+
+    <!--Login Page-->
+    <string name="have_account">Sudah memiliki akun?</string>
+    <string name="save_me">Biarkan aku tetap masuk</string>
+
+    <!--Home Page-->
+    <string name="hello">"Halo, "</string>
+    <string name="tips_for_you">Berita Terkini!</string>
+
+    <!--Settings Page-->
+    <string name="logout">Keluar</string>
+    <string name="title_activity_dew_care">DewCareActivity</string>
+
+    <!--Toolbar-->
+    <string name="toolbar">PetCare terdekat</string>
+
+    <string-array name="nearby">
+        <item>PetCare</item>
+        <item>PetShop</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--Appointment Vet-->
+    <string name="operational_time">Waktu Operasional</string>
+    <string name="choosed_schedule">Pilih jadwal</string>
+    <string name="schedule">Jadwal yang kamu pilih : </string>
+    <string name="choose_schedule_first">Pilih jadwal terlebih dahulu</string>
+    <string name="input_complaint">Masukkan keluhan : </string>
+    <string name="desc_complaint">Deskripsikan keluhan</string>
+    <string name="make_appointment">Buat Janji</string>
+    <string name="vet_name">Nama Dokter</string>
+    <string name="vet_loc">Lokasi Dokter</string>
+    <string name="vet_day">Hari</string>
+    <string name="vet_open">Buka</string>
+    <string name="vet_until">s/d</string>
+    <string name="vet_close">Tutup</string>
+    <string name="change_appoint">ubah janji</string>
+    <string name="change_schedule">Jadwal Temu :</string>
+    <string name="change_used_jadwal">Jadwal</string>
+    <string name="change_jadwal">Ubah Jadwal</string>
+    <string name="status_nama_dokter">nama dokter</string>
+    <string name="status_location">Location</string>
+    <string name="status_status">Status :</string>
+    <string name="status_status_value">Status</string>
+    <string name="status_keluhan_">Keluhan</string>
+    <string name="status_batalkan">Batalkan</string>
+    <string name="status_keluhan">keluhan:</string>
+    <string name="status_ubah">Ubah</string>
+    <string name="status_jadwal">Jadwal :</string>
+    <string name="status_jadwal_value">Jadwal</string>
+    <string name="list_nama_vet">Nama Vet</string>
+    <string name="list_location">Location</string>
+    <string name="list_day">Day</string>
+    <string name="list_close">Close</string>
+    <string name="list_open">Open</string>
+    <string name="admin_nama_dokter">Nama Dokter</string>
+    <string name="admin_status">Status :</string>
+    <string name="admin_keluhan">Keluhan :</string>
+    <string name="admin_status_value">Status</string>
+    <string name="admin_jadwal">Jadwal :</string>
+    <string name="admin_jadwal_value">Jadwal</string>
+    <string name="admin_tolak">Tolak</string>
+    <string name="admin_terima">Terima</string>
+    <string name="admin_keluhan_value">Keluhan</string>
+    <string name="nav_appointment">Appointment</string>
+
+
+    <!--DewTec-->
+    <string name="input_indication">Masukkan Gejala</string>
+    <string name="detect_result">HASIL DIAGNOSA</string>
+    <string name="detect_ill">Penyakit</string>
+    <string name="detect_category">Kategori</string>
+    <string name="detect_description">Keterangan</string>
+    <string name="detect_suggestion_act">Saran Tindakan :</string>
+    <string name="detect_need_help">Butuh Bantuan?</string>
+    <string name="detect_pilih_hewan">Pilih Hewan :</string>
+    <string name="nav_dewtec">DewTec</string>
+    <string name="detect_info_choose_symptoms">Pilih beberapa gejala dibawah ini</string>
+    <string name="detect_diagnosa">Diagnosa</string>
+    <string name="detect_choose_symptoms">Pilih Gejala :</string>
+    <string name="detect_hint_symptoms">Masukkan gejala terlebih dahulu</string>
+    <string name="detect_kucing">kucing</string>
+    <string name="detect_anjing">anjing</string>
+    <string name="detect_kelinci">kelinci</string>
+
+
+    <!--DewStore-->
+    <string name="comingsoon">Akan segera hadir</string>
+    <string name="nav_store_kembali">Kembali</string>
+    <string name="nav_riwayat">Riwayat</string>
+    <string name="settings_info_akun_anda">INFO AKUN ANDA</string>
+    <string name="settings_nama">Nama :</string>
+    <string name="settings_nama_pengguna_value">Nama Pengguna</string>
+    <string name="settings_email">Email :</string>
+    <string name="settings_email_pengguna_value">Email Pengguna</string>
+    <string name="article_source">SOURCE</string>
+    <string name="article_title">TITLE</string>
+    <string name="article_description">DESCRIPTION</string>
+    <string name="article_publisher">PUBLISHED AT</string>
+    <string name="indicator_button">Button</string>
+
+
+</resources>
